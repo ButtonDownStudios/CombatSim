@@ -1,0 +1,13 @@
+Viceroy-class Star Destroyer,20,Dual Heavy Turbolaser Turret,7,Ion Cannon,10,Laser Cannon
+Legacy-class Star Destroyer,10,Heavy Proton Torpedo Launcher,10,Dual Medium Turbolaser Cannon,16,Quad Heavy Turbolaser Turret,2,Ion Cannon,60,Point-Defense Laser Cannon
+Munificent-class Star Frigate,26,Dual Turbolaser Cannon,2,Prow Heavy Turbolaser Cannon,20,Light Turbolaser Turret,2,Long Range Ion Cannon,28,Point-Defense Laser Cannon
+Reborn Sith Heavy Cruiser,15,Proton Torpedo Launcher,20,Quad Turbolaser Cannon,40,Heavy Turbolaser Turret,20,Point-Defense Ion Cannon,30,Point-Defense Laser Cannon
+Banking Clan Cruiser,26,Turbolaser Battery,18,Dual Heavy Turbolaser
+Shunan Assault Destroyer,45,Turbolaser Battery,12,Ion Cannon
+Assault Frigate,15,Turbolaser Battery,20,Quad Laser Cannon,15,Laser Cannon
+Majestic-class Heavy Cruiser,8,Missile Launcher,30,Turbolaser,20,Ion Cannon,20,Laser Cannon
+Dragon-class Heavy Cruiser,7,Missile Launcher,10,Turbolaser Battery,15,Quad Turbolaser Cannon
+Dreadnought-class Heavy Cruiser,15,Turbolaser Battery,20,Quad Light Turbolaser Cannon,15,Turbolaser Cannon
+Vindicator-class Heavy Cruiser,25,Quad Light Turbolaser,25,Light Turbolaser,20,Point-Defense Ion Cannon,10,Point-Defense Laser Cannon
+Republic Heavy Destroyer,30,Turbolaser Battery,10,Ion Cannon
+Hapan Battle Dragon,26,Proton Torpedo Launcher,40,Turbolaser Battery,2,Triple Ion Cannon,90,Heavy Laser Cannon

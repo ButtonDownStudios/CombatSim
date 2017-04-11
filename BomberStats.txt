@@ -1,0 +1,6 @@
+Y-Wing,468,234,25
+K-Wing,320,160,20
+UG Bomber,300,150,20
+TIE Bomber,156,0,10
+Reborn Sith Bomber,370,185,20
+Hyena-class Bomber,250,0,15

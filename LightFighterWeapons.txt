@@ -1,0 +1,13 @@
+E-Wing,2,Proton Torpedo Launcher,3,Laser Cannon
+UG Fighter,1,Proton Torpedo Launcher,3,Laser Cannon
+TIE Fighter,2,Laser Cannon
+TIE Raptor,2,Missile Launcher,4,Laser Cannon
+TIE Phantom,5,Laser Cannon
+Reborn Sith Light Fighter,2,Proton Torpedo Launcher,4,Laser Cannon
+Belbullab-22 Starfighter,2,Triple Laser Cannon
+Droid Tri-Fighter,2,Missile Launcher,1,Heavy Laser Cannon,3,Light Laser Cannon
+Z-95 Headhunter,2,Missile Launcher,2,Laser Cannon
+N-1 Starfighter,1,Proton Torpedo Launcher,2,Laser Cannon
+Vulture-class Droid Starfighter,4,Laser Cannon
+Miy'til Starfighter,1,Missile Launcher,2,Laser Cannon
+Nssis-class Clawcraft,4,Laser Cannon

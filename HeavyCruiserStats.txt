@@ -1,0 +1,13 @@
+Viceroy-class Star Destroyer,30000,15000,72,80
+Legacy-class Star Destroyer,28000,14000,40,75
+Munificent-class Star Frigate,16500,8250,240,70
+Reborn Sith Heavy Cruiser,16000,8000,48,70
+Banking Clan Cruiser,16000,8000,36,70
+Shunan Assault Destroyer,14000,7000,60,70
+Assault Frigate,14000,7000,0,70
+Majestic-class Heavy Cruiser,14000,7000,0,70
+Dragon-class Heavy Cruiser,14000,7000,24,70
+Dreadnought-class Heavy Cruiser,12000,6000,12,70
+Vindicator-class Heavy Cruiser,12000,6000,72,70
+Republic Heavy Destroyer,10000,5000,96,65
+Hapan Battle Dragon,10000,5000,36,65

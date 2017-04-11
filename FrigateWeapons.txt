@@ -1,0 +1,19 @@
+Hammerhead-class Heavy Cruiser,4,Dual Turbolaser,6,Laser Cannon
+Gladiator-class Star Destroyer,2,Missile Launcher,5,Light Turbolaser Battery,2,Point-Defense Laser Cannon
+Alliance Assault Frigate,20,Turbolaser Battery,8,Ion Cannon
+Galactic Defense Frigate,18,Turbolaser Battery,6,Laser Cannon
+Ardent-class Frigate,5,Heavy Turbolaser Battery,3,Turbolaser Battery,5,Point-Defense Laser Cannon
+Sacheen-class Light Escort,10,Heavy Turbolaser Cannon,8,Ion Cannon,8,Laser Cannon
+Republic Battle Frigate,15,Turbolaser Battery,6,Laser Cannon
+Imperial Battle Frigate,20,Turbolaser Battery
+Dogan Support Frigate,14,Dual Turbolaser Turret,10,Ion Cannon,10,Point-Defense Laser Cannon
+Kaloth-class Battle Cruiser,29,Turbolaser Battery,15,Point-Defense Laser Cannon
+Class 1000 Cruiser,28,Turbolaser,12,Ion Cannon
+Star Galleon-class Frigate,1,Missile Launcher,10,Turbolaser
+Nebulon-B Frigate,12,Turbolaser Battery,12,Laser Cannon
+Corona-class Frigate,10,Turbolaser Cannon,4,Ion Cannon,10,Laser Cannon
+Nebulon-B2 Frigate,1,Missile Launcher,7,Turbolaser,3,Dual Heavy Turbolaser Turret
+Lancer-class Frigate,20,Quad Laser Cannon
+Arquitens-class Light Cruiser,2,Missile Launcher,4,Dual Turbolaser Cannon,4,Quad Laser Cannon
+Armadia-class Thrustship,4,Missile Launcher,8,Turbolaser Battery,6,Ion Cannon
+Bayonet-class Light Cruiser,8,Heavy Turbolaser,6,Laser Cannon

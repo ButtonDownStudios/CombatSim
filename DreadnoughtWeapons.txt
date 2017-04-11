@@ -1,0 +1,7 @@
+Emperor-class Star Dreadnought,500,Proton Torpedo Launcher,10000,Heavy Turbolaser Cannon,1000,Ion Cannon,2000,Point-Defense Laser Cannon
+Imperial Dreadnought Cruiser,50,Proton Torpedo Launcher,500,Turbolaser Battery,300,Ion Cannon,200,Laser Cannon
+Executor-class Star Dreadnought,250,Missile Launcher,2000,Heavy Turbolaser Cannon,2000,Turbolaser Cannon,250,Heavy Ion Cannon,500 Point-Defense Laser Cannon
+Eclipse-class Star Dreadnought,1,Superlaser,500,Turbolaser,74,Ion Cannon,550,Heavy Laser Cannon
+Viscount-class Star Defender,200,Missile Launcher,2000,Heavy Turbolaser,2000,Turbolaser,300,Heavy Ion Cannon,500,Point-Defense Laser Cannon
+Sovereign-class Super Star Destroyer,1,Superlaser,500,Turbolaser Battery,500,Heavy Turbolaser Cannon,75,Ion Cannon
+Super Star Destroyer,1000,Turbolaser Battery,100,Ion Cannon

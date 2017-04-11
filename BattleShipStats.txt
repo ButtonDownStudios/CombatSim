@@ -1,0 +1,25 @@
+Mediator-class Battle Cruiser,72000,36000,156,90
+Allegiance-class Star Destroyer,44000,22000,48,85
+Invincible-class Dreadnought,40220,20110,0,85
+Republic Class Cruiser,40000,20000,180,85
+Reborn Sith Battle Cruiser,32000,16000,72,80
+Galaforian Battle Cruiser,32000,16000,72,80
+United Galatic Battle Cruiser,32000,16000,156,80
+Pellaeon-class Star Destroyer,32000,16000,48,80
+Imperial-class Star Destroyer Mk1,32000,16000,72,80
+Imperial-class Star Destroyer Mk2,32000,16000,72,80
+Quantum Cruiser,30000,15000,144,80
+Raptorian-class Star Destroyer,26000,13000,60,75
+MC90 Star Cruiser,25100,12550,72,75
+Republic-class Star Destroyer,25000,12500,36,75
+MC80a Star Cruiser,24000,12000,72,75
+Imperial Bulk Cruiser,24000,12000,120,75
+Trade Federation Cruiser,21760,10880,240,75
+Nebula-class Star Destroyer,21600,10400,60,75
+Scythe-class Battle Cruiser,20000,10000,36,75
+Galactic Class Destroyer,20000,10000,72,75
+Harrow-class Star Destroyer,18200,9100,36,70
+Shree-class Battle Cruiser,18000,9000,500,70
+Victory-class Star Destroyer,18000,9000,24,70
+Victory II-class Star Destroyer,18000,9000,24,70
+Bothan Assault Cruiser,17000,8500,0,70

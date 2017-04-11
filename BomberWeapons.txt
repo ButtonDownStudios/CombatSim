@@ -1,0 +1,6 @@
+Y-Wing,2,Proton Torpedo Launcher,2,Laser Cannon,2,Ion Cannon
+K-Wing,8,Proton Torpedo Launcher,10,Missile Launcher,1,Quad Turbolaser Turret,1,Dual Laser Cannon
+UG Bomber,3,Proton Torpedo Launcher,2,Laser Cannon
+TIE Bomber,2,Proton Torpedo Launcher,2,Missile Launcher,2,Laser Cannon
+Reborn Sith Bomber,2,Heavy Proton Torpedo Launcher,4,Missile Launcher,4,Heavy Laser Cannon
+Hyena-class Bomber,2,Proton Torpedo Launcher,2,Missile Launcher,2,Light Laser Cannon

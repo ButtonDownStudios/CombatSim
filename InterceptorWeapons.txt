@@ -1,0 +1,8 @@
+A-Wing,2,Missile Launcher,2,Laser Cannon
+UG Interceptor,3,Laser Cannon
+TIE Interceptor,4,Laser Cannon
+Reborn Sith Interceptor,1,Missile Launcher,2,Laser Cannon,2,Ion Cannon
+Eta-2 Actis-class Interceptor,2,Laser Cannon,2,Light Ion Cannon
+Alpha-3 Nimbus-class V-wing Starfighter,2,Dual Laser Cannon
+Delta-7 Aethersprite-class Light Interceptor,1,Missile Launcher,2,Dual Laser Cannon
+A-9 Vigilance Interceptor,2,Heavy Laser Cannon

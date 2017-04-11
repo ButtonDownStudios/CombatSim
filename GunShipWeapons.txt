@@ -1,0 +1,13 @@
+Reborn Sith Gunship,2,Heavy Proton Torpedo Launcher,2,Missile Launcher,12,Heavy Turbolaser Turret,10,Point-Defense Laser Cannon
+Federation Assault Gunship,8,Turbolaser Battery,4,Laser Cannon
+Marauder Corvette,8,Dual Turbolaser
+Warrior-class Gunship,4,Missile Launcher,10,Turbolaser Cannon,8,Laser Cannon
+Agave-class Picket Ship,2,Turbolaser Cannon,4,Laser Cannon
+Shunan Gunship,6,Turbolaser Battery,4,Laser Cannon
+Corellian Corvette,6,Dual Turbolaser Cannon
+Imperial Assault Gunship,4,Turbolaser Battery,4,Laser Cannon
+Assassin-class Corvette,1,Missile Launcher,6,Dual Turbolaser Turret
+Corellian Gunship,4,Missile Launcher,8,Dual Turbolaser Cannon,6,Quad Laser Cannon
+Old Republic Light Cruiser,2,Dual Turbolaser Battery
+Braha'tok-class Gunship,8,Missile Launcher,8,Dual Turbolaser Cannon
+Fw'sen-class Picket Ship,2,Turbolaser,6,Ion Cannon,2,Laser Cannon

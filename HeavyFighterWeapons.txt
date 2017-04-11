@@ -1,0 +1,7 @@
+Bes'uliik,2,Heavy Proton Torpedo Launcher,4,Laser Cannon
+X-Wing,2,Proton Torpedo Launcher,4,Laser Cannon
+B-Wing,2,Proton Torpedo Launcher,1,Heavy Laser Cannon,3,Ion Cannon
+ARC-170,1,Proton Torpedo Launcher,4,Laser Cannon
+TIE Defender,2,Missile Launcher,4,Laser Cannon,2,Ion Cannon
+Reborn Sith Heavy Fighter,2,Missile Launcher,4,Heavy Laser Cannon,2,Ion Cannon
+Aleph-class Starfighter,1,Proton Torpedo Launcher,1,Missile Launcher,2,Quad Laser Cannon

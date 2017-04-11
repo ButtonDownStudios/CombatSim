@@ -1,0 +1,12 @@
+Republic Assault Ship,15040,7520,0,70
+Tartan-class Patrol Cruiser,12000,6000,0,70
+Enforcer-class Patrol Cruiser,12000,6000,0,70
+Immobilizer 418 Cruiser,12000,6000,24,70
+Interdictor-class Cruiser,12000,6000,24,70
+Commerce Guild Destroyer,12000,6000,60,70
+MC40a Light Cruiser,10100,5050,12,70
+Strike Cruiser,9000,4500,24,65
+Reborn Sith Light Cruiser,8000,4000,24,65
+Hapes Nova-class Battle Cruiser,8000,4000,36,65
+Belarus-class Medium Cruiser,8000,4000,0,65
+Carrack-class Light Cruiser,7000,3500,5,65

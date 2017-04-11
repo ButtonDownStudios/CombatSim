@@ -1,0 +1,52 @@
+Superlaser,1000000,1000000,100,80
+Heavy Proton Torpedo Launcher,2000,2000,25,90
+Proton Torpedo Launcher,1500,1500,25,90
+Missile Launcher,1000,1000,20,90
+Quad Turbolaser Battery,1200,1200,8,60
+Dual Turbolaser Battery,600,600,8,70
+Heavy Turbolaser Battery,340,340,8,75
+Turbolaser Battery,300,300,8,75
+Light Turbolaser Battery,260,260,8,75
+Quad Turbolaser,800,800,6,60
+Quad Light Turbolaser,640,640,6,60
+Dual Heavy Turbolaser,480,480,6,70
+Dual Turbolaser,400,400,6,70
+Prow Heavy Turbolaser,340,340,8,80
+Heavy Turbolaser,240,240,6,75
+Turbolaser,200,200,6,75
+Light Turbolaser,160,160,6,75
+Quad Turbolaser Cannon,600,600,5,55
+Quad Light Turbolaser Cannon,440,440,5,55
+Dual Heavy Turbolaser Cannon,380,380,5,65
+Dual Medium Turbolaser Cannon,340,340,5,65
+Dual Turbolaser Cannon,300,300,5,65
+Prow Heavy Turbolaser Cannon,290,290,7,75
+Heavy Turbolaser Cannon,190,190,5,70
+Turbolaser Cannon,150,150,5,70
+Quad Heavy Turbolaser Turret,560,560,3,50
+Quad Turbolaser Turret,400,400,3,50
+Dual Heavy Turbolaser Turret,280,280,3,60
+Dual Turbolaser Turret,200,200,3,60
+Heavy Turbolaser Turret,140,140,3,65
+Turbolaser Turret,100,100,3,65
+Light Turbolaser Turret,60,60,3,65
+Ion Cannon Battery,10,300,8,80
+Triple Ion Cannon,15,600,5,65
+Long Range Ion Cannon,6,240,5,80
+Enhanced Ion Cannon,5,200,3,85
+Heavy Point-Defense Ion Cannon,7,280,5,95
+Heavy Ion Cannon,7,280,5,75
+Medium Ion Cannon,7,240,5,75
+Point-Defense Ion Cannon,5,200,5,95
+Ion Cannon,5,200,5,75
+Light Point-Defense Ion Cannon,3,120,5,95
+Light Ion Cannon,3,120,5,75
+Quad Laser Cannon,80,80,1,65
+Triple Laser Cannon,60,60,1,70
+Dual Laser Cannon,40,40,1,75
+Heavy Point-Defense Laser Cannon,28,28,1,95
+Heavy Laser Cannon,28,28,1,80
+Dual Light Laser Cannon,24,24,1,75
+Point-Defense Laser Cannon,20,20,1,95
+Laser Cannon,20,20,1,80
+Light Laser Cannon,12,12,1,80

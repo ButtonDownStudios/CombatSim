@@ -1,0 +1,25 @@
+Mediator-class Battle Cruiser,34,Proton Torpedo Launcher,90,Heavy Turbolaser Battery,210,Turbolaser Battery,140,Ion Cannon Battery
+Allegiance-class Star Destroyer,20,Missile Launcher,80,Heavy Turbolaser Battery,50,Heavy Turbolaser Cannon,50,Ion Cannon
+Invincible-class Dreadnought,6,Missile Launcher,12,Turbolaser Cannon,30,Dual Laser Cannon
+Republic Class Cruiser,10,Proton Torpedo Launcher,100,Turbolaser Battery,40,Ion Cannon
+Reborn Sith Battle Cruiser,20,Proton Torpedo Launcher,60,Heavy Turbolaser Battery,60,Quad Heavy Turbolaser Turret,25,Ion Cannon,40,Point-Defense Laser Cannon
+Galaforian Battle Cruiser,20,Proton Torpedo Launcher,40,Quad Turbolaser Cannon,80,Heavy Turbolaser Cannon,50,Ion Cannon,30,Laser Cannon
+United Galatic Battle Cruiser,95,Turbolaser Battery,25,Ion Cannon
+Pellaeon-class Star Destroyer,50,Proton Torpedo Launcher,100,Heavy Turbolaser Battery,50,Turbolaser Battery,80,Ion Cannon
+Imperial-class Star Destroyer Mk1,60,Turbolaser,60,Ion Cannon
+Imperial-class Star Destroyer Mk2,50,Heavy Turbolaser Battery,50,Heavy Turbolaser Cannon,20,Enhanced Ion Cannon
+Quantum Cruiser,5,Proton Torpedo Launcher,90,Turbolaser Battery,20,Ion Cannon
+Raptorian-class Star Destroyer,50,Quad Turbolaser,30,Turbolaser Cannon,10,Ion Cannon
+MC90 Star Cruiser,6,Proton Torpedo Launcher,75,Turbolaser Battery,75,Ion Cannon Battery
+Republic-class Star Destroyer,40,Heavy Turbolaser Battery,40,Heavy Turbolaser Cannon,20,Ion Cannon
+MC80a Star Cruiser,48,Turbolaser Battery,20,Ion Cannon Battery
+Imperial Bulk Cruiser,80,Turbolaser Battery,20,Ion Cannon
+Trade Federation Cruiser,102,Proton Torpedo Launcher,14,Quad Turbolaser Cannon,14,Point-Defense Ion Cannon,2,Ion Cannon,34,Dual Laser Cannon,40,Point-Defense Laser Cannon
+Nebula-class Star Destroyer,8,Missile Launcher,40,Heavy Turbolaser,40,Turbolaser,20,Ion Cannon
+Scythe-class Battle Cruiser,30,Heavy Turbolaser Battery,60,Turbolaser Battery,20,Ion Cannon
+Galactic Class Destroyer,60,Turbolaser Battery,20,Ion Cannon
+Harrow-class Star Destroyer,25,Dual Turbolaser Cannon,25,Turbolaser Cannon,12,Ion Cannon
+Shree-class Battle Cruiser,12,Missile Launcher,24,Heavy Turbolaser,24,Ion Cannon
+Victory-class Star Destroyer,80,Missile Launcher,10,Quad Turbolaser Battery,50,Dual Turbolaser Battery
+Victory II-class Star Destroyer,20,Turbolaser Battery,20,Dual Heavy Turbolaser Cannon,10,Heavy Ion Cannon
+Bothan Assault Cruiser,20,Proton Torpedo Launcher,20,Heavy Turbolaser,24,Light Turbolaser,10,Enhanced Ion Cannon

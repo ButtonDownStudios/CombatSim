@@ -1,0 +1,9 @@
+Trade Federation Battleship,500,Proton Torpedo Launcher,40,Point-Defense Ion Cannon,42,Quad Laser Cannon,66,Dual Laser Cannon
+Reborn Sith Battle Carrier,50,Proton Torpedo Launcher,100,Quad Heavy Turbolaser Turret,120,Heavy Turbolaser Turret,30,Point-Defense Ion Cannon,60,Point-Defense Laser Cannon
+Revenge-class Heavy Carrier,80,Heavy Turbolaser Battery,80,Heavy Turbolaser Cannon,40,Ion Cannon
+Festrian Super Carrier,20,Proton Torpedo Launcher,60,Heavy Turbolaser Cannon,40,Point-Defense Ion Cannon,60,Point-Defense Laser Cannon
+Secutor-class Star Destroyer,15,Turbolaser Battery,15,Light Turbolaser,15,Ion Cannon Battery,16,Medium Ion Cannon
+Venator-class Star Destroyer,4,Heavy Proton Torpedo Launcher,2,Dual Medium Turbolaser Cannon,8,Heavy Turbolaser Turret,52,Point-Defense Laser Cannon
+Endurance-class Fleet Carrier,12,Turbolaser,8,Ion Cannon,20,Laser Cannon
+Defender-class Assault Carrier,20,Laser Cannon
+Escort Carrier,10,Dual Laser Cannon

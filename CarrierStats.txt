@@ -1,0 +1,9 @@
+Trade Federation Battleship,96000,48000,1500,90
+Reborn Sith Battle Carrier,80000,40000,360,90
+Revenge-class Heavy Carrier,80000,40000,720,90
+Festrian Super Carrier,64000,32000,720,90
+Secutor-class Star Destroyer,44000,22000,144,85
+Venator-class Star Destroyer,22740,11370,420,75
+Endurance-class Fleet Carrier,21600,10400,144,75
+Defender-class Assault Carrier,14000,7000,36,70
+Escort Carrier,10000,5000,60,65

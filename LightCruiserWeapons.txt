@@ -1,0 +1,12 @@
+Republic Assault Ship,4,Proton Torpedo Launcher,12,Quad Turbolaser Turret,24,Laser Cannon
+Tartan-class Patrol Cruiser,20,Laser Cannon
+Enforcer-class Patrol Cruiser,10,Turbolaser Battery,6,Ion Cannon,10,Quad Laser Cannon
+Immobilizer 418 Cruiser,20,Quad Laser Cannon
+Interdictor-class Cruiser,4,Turbolaser Battery,2,Ion Cannon,20,Quad Laser Cannon
+Commerce Guild Destroyer,1,Prow Heavy Turbolaser,4,Heavy Turbolaser Cannon,5,Turbolaser Cannon,6,Heavy Turbolaser Turret,30,Dual Laser Cannon,12,Dual Light Laser Cannon,60,Point-Defense Laser Cannon
+MC40a Light Cruiser,2,Missile Launcher,14,Turbolaser Turret,18,Ion Cannon
+Strike Cruiser,10,Turbolaser Battery,20,Turbolaser,10,Enhanced Ion Cannon
+Reborn Sith Light Cruiser,8,Quad Heavy Turbolaser Turret,20,Heavy Turbolaser Turret,10,Enhanced Ion Cannon,20,Point-Defense Laser Cannon
+Hapes Nova-class Battle Cruiser,25,Turbolaser Battery,10,Ion Cannon,10,Heavy Point-Defense Laser Cannon
+Belarus-class Medium Cruiser,25,Turbolaser Cannon,5 Ion Cannon
+Carrack-class Light Cruiser,10,Heavy Turbolaser,20,Ion Cannon
