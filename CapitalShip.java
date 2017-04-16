@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-public abstract class CapitalShip extends Ship{
+public class CapitalShip extends Ship{
 
     private int hangar;
 
-    public CapitalShip(String shipClass, int hull, int shields, int hangar, int maneuverability, String[] newWeapons)
-    {
-        super(shipClass, hull, shields, maneuverability, newWeapons);
-        this.hangar = hangar;
+    public CapitalShip(ShipType shipType, String[] stats, String[] newWeapons){
+        super(stats[0], Integer.parseInt(stats[1]), Integer.parseInt(stats[2]), Integer.parseInt(stats[4]), newWeapons);
+        super.setType(shipType);
+        hangar = Integer.parseInt(stats[3]);
         super.setPrice(getPrice());
     }
     
@@ -18,14 +18,6 @@ public abstract class CapitalShip extends Ship{
             amount = amount + super.getWeapons().get(i).getPrice();
         }
         return amount;
-    }
-    
-    public void setType(String newType){
-        super.setType(newType);
-    }
-    
-    public void setPriorities(HashMap<Integer, ArrayList<String>> priority){
-        super.setPriorities(priority);
     }
     
     public int getHangar(){

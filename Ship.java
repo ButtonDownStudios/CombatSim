@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public abstract class Ship{
     private String shipClass;
-    private String type;
+    private ShipType type;
     private int hull;
     private double damagedHull;
     private int shields;
@@ -48,13 +48,10 @@ public abstract class Ship{
     public boolean isHit(){
         int hit = 1 + Randomizer.getRgen(100);
 
-        boolean didHit;
         if(hit <= maneuverability){
-            didHit = true;
-        }else{
-            didHit = false;
+            return true;
         }
-        return didHit;
+            return false;
     }
 
     public void shieldRegen(){
@@ -95,7 +92,8 @@ public abstract class Ship{
             newTarget = Randomizer.getRgen(f.size());
         }
         for(int i = 1; i <= 3; i++){
-            if(checkTarget(3, f, newTarget)){
+            if(
+checkTarget(3, f, newTarget)){
                 setTarget(f, newTarget);
                 return;
             }else{
@@ -107,39 +105,39 @@ public abstract class Ship{
 
     public boolean checkTarget(int check, ArrayList<Ship> f, int newTarget){
         if(check == 1){
-            for(String s : priority.get(1)){
-                if(f.get(newTarget).getType().equals(s)){
+            for(ShipType s : type.getPriority()[0]){
+                if(f.get(newTarget).getType() == s){
                     return true;
                 }
             }
             return false;
         }
         if(check == 2){
-            for(String s : priority.get(1)){
-                if(f.get(newTarget).getType().equals(s)){
+            for(ShipType s : type.getPriority()[0]){
+                if(f.get(newTarget).getType() == s){
                     return true;
                 }
             }
-            for(String s : priority.get(2)){
-                if(f.get(newTarget).getType().equals(s)){
+            for(ShipType s : type.getPriority()[1]){
+                if(f.get(newTarget).getType() == s){
                     return true;
                 }
             }
             return false;
         }
         if(check == 3){
-            for(String s : priority.get(1)){
-                if(f.get(newTarget).getType().equals(s)){
+            for(ShipType s : type.getPriority()[0]){
+                if(f.get(newTarget).getType() == s){
                     return true;
                 }
             }
-            for(String s : priority.get(2)){
-                if(f.get(newTarget).getType().equals(s)){
+            for(ShipType s : type.getPriority()[1]){
+                if(f.get(newTarget).getType() == s){
                     return true;
                 }
             }
-            for(String s : priority.get(3)){
-                if(f.get(newTarget).getType().equals(s)){
+            for(ShipType s : type.getPriority()[2]){
+                if(f.get(newTarget).getType() == s){
                     return true;
                 }
             }
@@ -182,12 +180,8 @@ public abstract class Ship{
         price = newPrice;
     }
 
-    public void setType(String newType){
+    public void setType(ShipType newType){
         type = newType;
-    }
-
-    public void setPriorities(HashMap<Integer, ArrayList<String>> priority){
-        this.priority = priority;
     }
 
     public int getHull(){
@@ -202,7 +196,7 @@ public abstract class Ship{
         return weapons;
     }
 
-    public String getType(){
+    public ShipType getType(){
         return type;
     }
 

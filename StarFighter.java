@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-public abstract class StarFighter extends Ship{
+public class StarFighter extends Ship{
 
-    public StarFighter(String shipClass, int hull, int shields, int maneuverability, String[] newWeapons)
-    {
-        super(shipClass, hull, shields, maneuverability, newWeapons);
+    public StarFighter(ShipType shipType, String[] stats, String[] newWeapons){
+        super(stats[0], Integer.parseInt(stats[1]), Integer.parseInt(stats[2]), Integer.parseInt(stats[3]), newWeapons);
+        super.setType(shipType);
         super.setPrice(getPrice());
     }
     
@@ -14,13 +14,5 @@ public abstract class StarFighter extends Ship{
             amount = amount + super.getWeapons().get(i).getPrice();
         }
         return amount;
-    }
-    
-    public void setType(String newType){
-        super.setType(newType);
-    }
-    
-    public void setPriorities(HashMap<Integer, ArrayList<String>> priority){
-        super.setPriorities(priority);
     }
 }
