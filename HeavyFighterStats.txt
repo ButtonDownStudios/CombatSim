@@ -5,3 +5,4 @@ ARC-170,290,145,15
 TIE Defender,184,92,10
 Reborn Sith Heavy Fighter,290,145,15
 Aleph-class Starfighter,360,180,20
+CloakShape Fighter,300,0,20

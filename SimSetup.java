@@ -8,13 +8,13 @@ public class SimSetup{
 
     private JFrame frame;
     private JPanel contentPane;
-    private int creditLimit;
+    private long creditLimit;
     private int roundLimit;
     private boolean end;
 
     public SimSetup(){
         roundLimit = 20000;
-        creditLimit = 2000000000;
+        creditLimit = 5000000000L;
         end = false;
         makeFrame();
     }
@@ -36,7 +36,7 @@ public class SimSetup{
 
         selection.add(new JLabel("Select Size of Battle:"));
 
-        String[] sizeList = {"Huge","Large","Medium","Small"};
+        String[] sizeList = {"Giant","Huge","Large","Medium","Small","Skirmish"};
         JComboBox<String> sizeChoice = new JComboBox<>(sizeList);
 
         Speaker creditSpeak = new Speaker();
@@ -47,19 +47,25 @@ public class SimSetup{
                 if(choices[0] instanceof String){
                     choice = (String) choices[0];
                 }
-                if(choice.equals("Huge")){
+                 if(choice.equals("Giant")){
                     roundLimit = 20000;
+                    creditLimit = 5000000000L;
+                }else if(choice.equals("Huge")){
+                    roundLimit = 10000;
                     creditLimit = 2000000000;
                 }else if(choice.equals("Large")){
-                    roundLimit = 10000;
+                    roundLimit = 5000;
                     creditLimit = 1000000000;
                 }else if(choice.equals("Medium")){
                     roundLimit = 2500;
                     creditLimit = 500000000;
                 }else if(choice.equals("Small")){
                     roundLimit = 1000;
-                    creditLimit = 40000000;
-                }
+                    creditLimit = 50000000;
+                }else if(choice.equals("Skirmish")){
+                    roundLimit = 500;
+                    creditLimit = 20000000;
+                } 
                 creditSpeak.changeData(creditLimit);
                 roundSpeak.changeData(roundLimit);
             });
@@ -90,7 +96,7 @@ public class SimSetup{
         return roundLimit;
     }
 
-    public int getCreditLimit(){
+    public long getCreditLimit(){
         return creditLimit;
     }
     

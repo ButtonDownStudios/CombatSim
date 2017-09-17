@@ -2,43 +2,34 @@ import java.io.*;
 
 public class ShipFactory {
 
-    public static Ship makeShip(String shipType, String shipClass){
-        if(shipType.equals("Dreadnought")){
-            return new Dreadnought(dreadnoughtStat(shipClass), dreadnoughtWeapons(shipClass));
-        }
-        if(shipType.equals("Carrier")){
-            return new Carrier(carrierStat(shipClass), carrierWeapons(shipClass));
-        }
-        if(shipType.equals("Battleship")){
-            return new BattleShip(battleshipStat(shipClass), battleshipWeapons(shipClass));
-        }
-        if(shipType.equals("Heavy Cruiser")){
-            return new HeavyCruiser(heavycruiserStat(shipClass), heavycruiserWeapons(shipClass));
-        }
-        if(shipType.equals("Light Cruiser")){
-            return new LightCruiser(lightcruiserStat(shipClass), lightcruiserWeapons(shipClass));
-        }
-        if(shipType.equals("Frigate")){
-            return new Frigate(frigateStat(shipClass), frigateWeapons(shipClass));
-        }
-        if(shipType.equals("Gunship")){
-            return new GunShip(gunshipStat(shipClass), gunshipWeapons(shipClass));
-        }
-        if(shipType.equals("Heavy Fighter")){
-            return new HeavyFighter(heavyfighterStat(shipClass), heavyfighterWeapons(shipClass));
-        }
-        if(shipType.equals("Light Fighter")){
-            return new LightFighter(lightfighterStat(shipClass), lightfighterWeapons(shipClass));
-        }
-        if(shipType.equals("Interceptor")){
-            return new Interceptor(interceptorStat(shipClass), interceptorWeapons(shipClass));
-        }
-        if(shipType.equals("Bomber")){
-            return new Bomber(bomberStat(shipClass), bomberWeapons(shipClass));
+    public static Ship makeShip(ShipType shipType, String shipClass){
+        switch(shipType){
+            case DREADNOUGHT:
+            return new CapitalShip(shipType, dreadnoughtStat(shipClass), dreadnoughtWeapons(shipClass));
+            case CARRIER:
+            return new CapitalShip(shipType, carrierStat(shipClass), carrierWeapons(shipClass));
+            case BATTLESHIP:
+            return new CapitalShip(shipType, battleshipStat(shipClass), battleshipWeapons(shipClass));
+            case HEAVYCRUISER:
+            return new CapitalShip(shipType, heavycruiserStat(shipClass), heavycruiserWeapons(shipClass));
+            case LIGHTCRUISER:
+            return new CapitalShip(shipType, lightcruiserStat(shipClass), lightcruiserWeapons(shipClass));
+            case FRIGATE:
+            return new CapitalShip(shipType, frigateStat(shipClass), frigateWeapons(shipClass));
+            case GUNSHIP:
+            return new CapitalShip(shipType, gunshipStat(shipClass), gunshipWeapons(shipClass));
+            case HEAVYFIGHTER:
+            return new StarFighter(shipType, heavyfighterStat(shipClass), heavyfighterWeapons(shipClass));
+            case LIGHTFIGHTER:
+            return new StarFighter(shipType, lightfighterStat(shipClass), lightfighterWeapons(shipClass));
+            case INTERCEPTOR:
+            return new StarFighter(shipType, interceptorStat(shipClass), interceptorWeapons(shipClass));
+            case BOMBER:
+            return new StarFighter(shipType, bomberStat(shipClass), bomberWeapons(shipClass));
         }
         return null;
     }
-    
+
     public static String[] dreadnoughtStat(String shipClass){
         BufferedReader dreadnought;
         try{
@@ -74,8 +65,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] dreadnoughtWeapons(String shipClass){
+
+    public static String[] dreadnoughtWeapons(String shipClass){
         BufferedReader dreadnought;
         try{
             dreadnought = new BufferedReader(new FileReader("DreadnoughtWeapons.txt"));
@@ -110,7 +101,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] carrierStat(String shipClass){
         BufferedReader carrier;
         try{
@@ -146,8 +137,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] carrierWeapons(String shipClass){
+
+    public static String[] carrierWeapons(String shipClass){
         BufferedReader carrier;
         try{
             carrier = new BufferedReader(new FileReader("CarrierWeapons.txt"));
@@ -182,7 +173,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] battleshipStat(String shipClass){
         BufferedReader battleship;
         try{
@@ -218,8 +209,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] battleshipWeapons(String shipClass){
+
+    public static String[] battleshipWeapons(String shipClass){
         BufferedReader battleship;
         try{
             battleship = new BufferedReader(new FileReader("BattleShipWeapons.txt"));
@@ -254,7 +245,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] heavycruiserStat(String shipClass){
         BufferedReader heavycruiser;
         try{
@@ -290,8 +281,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] heavycruiserWeapons(String shipClass){
+
+    public static String[] heavycruiserWeapons(String shipClass){
         BufferedReader heavycruiser;
         try{
             heavycruiser = new BufferedReader(new FileReader("HeavyCruiserWeapons.txt"));
@@ -326,7 +317,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] lightcruiserStat(String shipClass){
         BufferedReader lightcruiser;
         try{
@@ -362,8 +353,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] lightcruiserWeapons(String shipClass){
+
+    public static String[] lightcruiserWeapons(String shipClass){
         BufferedReader lightcruiser;
         try{
             lightcruiser = new BufferedReader(new FileReader("LightCruiserWeapons.txt"));
@@ -398,7 +389,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] frigateStat(String shipClass){
         BufferedReader frigate;
         try{
@@ -434,8 +425,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] frigateWeapons(String shipClass){
+
+    public static String[] frigateWeapons(String shipClass){
         BufferedReader frigate;
         try{
             frigate = new BufferedReader(new FileReader("FrigateWeapons.txt"));
@@ -470,7 +461,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] gunshipStat(String shipClass){
         BufferedReader gunship;
         try{
@@ -506,8 +497,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] gunshipWeapons(String shipClass){
+
+    public static String[] gunshipWeapons(String shipClass){
         BufferedReader gunship;
         try{
             gunship = new BufferedReader(new FileReader("GunShipWeapons.txt"));
@@ -542,7 +533,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] heavyfighterStat(String shipClass){
         BufferedReader heavyfighter;
         try{
@@ -578,8 +569,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] heavyfighterWeapons(String shipClass){
+
+    public static String[] heavyfighterWeapons(String shipClass){
         BufferedReader heavyfighter;
         try{
             heavyfighter = new BufferedReader(new FileReader("HeavyFighterWeapons.txt"));
@@ -614,7 +605,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] lightfighterStat(String shipClass){
         BufferedReader lightfighter;
         try{
@@ -650,8 +641,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] lightfighterWeapons(String shipClass){
+
+    public static String[] lightfighterWeapons(String shipClass){
         BufferedReader lightfighter;
         try{
             lightfighter = new BufferedReader(new FileReader("LightFighterWeapons.txt"));
@@ -686,7 +677,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] interceptorStat(String shipClass){
         BufferedReader interceptor;
         try{
@@ -722,8 +713,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] interceptorWeapons(String shipClass){
+
+    public static String[] interceptorWeapons(String shipClass){
         BufferedReader interceptor;
         try{
             interceptor = new BufferedReader(new FileReader("InterceptorWeapons.txt"));
@@ -758,7 +749,7 @@ public class ShipFactory {
             return null;
         }
     }
-    
+
     public static String[] bomberStat(String shipClass){
         BufferedReader bomber;
         try{
@@ -794,8 +785,8 @@ public class ShipFactory {
             return null;
         }
     }
-    
-     public static String[] bomberWeapons(String shipClass){
+
+    public static String[] bomberWeapons(String shipClass){
         BufferedReader bomber;
         try{
             bomber = new BufferedReader(new FileReader("BomberWeapons.txt"));

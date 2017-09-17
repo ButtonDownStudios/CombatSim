@@ -51,7 +51,7 @@ public class FleetCreation{
     private JPanel innerStar;
 
     private static int hangarSpace;
-    private static int currentCost;
+    private static long currentCost;
 
     private static CreditUpdater creditUpdate;
     private static HangarUpdater hangarUpdate;
@@ -204,7 +204,8 @@ public class FleetCreation{
         shipCount.get(8).put("Miy'til Starfighter",0);
         shipCount.get(8).put("Nssis-class Clawcraft",0);
         shipCount.get(10).put("Hyena-class Bomber",0);
-
+        shipCount.get(7).put("CloakShape Fighter",0);
+        shipCount.get(10).put("Miy'til Assault Bomber",0);
 
         for(int i = 0; i < 11; i++){
             shipNames.add(new String[ship.get(i).size()]);

@@ -34,8 +34,8 @@ public class FleetStats{
 
         JButton finished = new JButton("Okay");
         finished.addActionListener((event) -> {
-                finished();
-            });
+            finished();
+        });
 
         contentPane.add(finished, BorderLayout.SOUTH);
 

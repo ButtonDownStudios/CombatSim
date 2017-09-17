@@ -2,31 +2,32 @@ import java.util.ArrayList;
 
 public class ReportHolder{
 
-    private static ArrayList<DamageReport> reports;
+    private static ArrayList<Report> reports;
     private static int current;
     private static int last;
+    private DamageReport display;
 
     public ReportHolder(){
         reports = new ArrayList<>();
     }
 
     public void newReport(int round,int f1holdCount,String[] f1Ships, ArrayList<int[]> f1Count, ArrayList<Message> f1Report,int f2holdCount, String[] f2Ships, ArrayList<int[]> f2Count, ArrayList<Message> f2Report){
-        reports.add(new DamageReport(round, f1holdCount,f1Ships, f1Count, f1Report, f2holdCount, f2Ships, f2Count, f2Report));
+        reports.add(new Report(round, f1holdCount,f1Ships, f1Count, f1Report, f2holdCount, f2Ships, f2Count, f2Report));
     }
 
     public void lastVisible(){
         current = reports.size();
-        reports.get(current - 1).makeVisible();
-        reports.get(current - 1).setInput(current);
+        display = new DamageReport(this,reports.get(current - 1).getround(),reports.get(current - 1).getf1holdCount(),reports.get(current - 1).getf1Ships(),reports.get(current - 1).getf1Count(),reports.get(current - 1).getf1Report(),reports.get(current - 1).getf2holdCount(),reports.get(current - 1).getf2Ships(),reports.get(current - 1).getf2Count(),reports.get(current - 1).getf2Report());
+        display.setInput(current);
     }
 
-    public static void newVisible(int knew){
+    public void newVisible(int knew){
         if(!(knew <= 0) && !(knew > last + 1)){
-            reports.get(current - 1).makeInvisible();
+            display.makeInvisible();
             current = knew;
-            reports.get(current - 1).makeVisible();
+            display = new DamageReport(this,reports.get(current - 1).getround(),reports.get(current - 1).getf1holdCount(),reports.get(current - 1).getf1Ships(),reports.get(current - 1).getf1Count(),reports.get(current - 1).getf1Report(),reports.get(current - 1).getf2holdCount(),reports.get(current - 1).getf2Ships(),reports.get(current - 1).getf2Count(),reports.get(current - 1).getf2Report());
         }
-        reports.get(current - 1).setInput(current);
+        display.setInput(current);
     }
 
     public void setFinal(int last){
