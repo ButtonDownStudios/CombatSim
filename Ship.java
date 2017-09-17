@@ -51,7 +51,7 @@ public abstract class Ship{
         if(hit <= maneuverability){
             return true;
         }
-            return false;
+        return false;
     }
 
     public void shieldRegen(){
@@ -93,7 +93,7 @@ public abstract class Ship{
         }
         for(int i = 1; i <= 3; i++){
             if(
-checkTarget(3, f, newTarget)){
+            checkTarget(3, f, newTarget)){
                 setTarget(f, newTarget);
                 return;
             }else{
@@ -110,7 +110,6 @@ checkTarget(3, f, newTarget)){
                     return true;
                 }
             }
-            return false;
         }
         if(check == 2){
             for(ShipType s : type.getPriority()[0]){
@@ -123,7 +122,6 @@ checkTarget(3, f, newTarget)){
                     return true;
                 }
             }
-            return false;
         }
         if(check == 3){
             for(ShipType s : type.getPriority()[0]){
@@ -141,7 +139,6 @@ checkTarget(3, f, newTarget)){
                     return true;
                 }
             }
-            return false;
         }
         return false;
     }
@@ -243,7 +240,7 @@ checkTarget(3, f, newTarget)){
     public Ship getTarget(){
         return target;
     }
-    
+
     public void repair(){
         if(damagedShields < shields){
             if(shields - damagedShields <= (shields) / 20){

@@ -2,15 +2,15 @@ import java.util.*;
 import javax.swing.*;
 
 public class CreditUpdater extends JLabel{
-    private int remaining;
-    public CreditUpdater(Integer left){
+    private long remaining;
+    public CreditUpdater(Long left){
         super();
         remaining = left;
     }
 
     public void update(Object data){
-        if(data instanceof Integer){
-            remaining = (Integer) data;
+        if(data instanceof Long){
+            remaining = (Long) data;
         }
         display();
     }
@@ -19,7 +19,7 @@ public class CreditUpdater extends JLabel{
         setText("You have " + remaining + " credits remaining.");
     }
 
-    public int getRemaining(){
+    public long getRemaining(){
         return remaining;
     }
 }

@@ -157,6 +157,8 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Miy'til Starfighter"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Nssis-class Clawcraft"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"Hyena-class Bomber"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"CloakShape Fighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"Miy'til Assault Bomber"));
 
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Emperor-class Star Dreadnought"));
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Imperial Dreadnought Cruiser"));
@@ -290,8 +292,10 @@ public class CombatSim{
         ship.get(8).add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Miy'til Starfighter"));
         ship.get(8).add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Nssis-class Clawcraft"));
         ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"Hyena-class Bomber"));
+        ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"CloakShape Fighter"));
+        ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"Miy'til Assault Bomber"));
 
-        int creditLimit = setup.getCreditLimit();
+        long creditLimit = setup.getCreditLimit();
         int roundLimit = setup.getRoundLimit();
 
         Fleet fleet1 = new Fleet(creditLimit, shipTypeExample);
@@ -309,56 +313,27 @@ public class CombatSim{
         long startTime = System.currentTimeMillis();
         do{
             counter++;
-            //  System.out.println("Round " + counter + " Stats:");
             fleet1.combat(fleet2.getFleet().get(0), counter);
-            //   System.out.println("");
             fleet2.combat(fleet1.getFleet().get(0), counter);
-            //   System.out.println("");
-            //   System.out.println("");
             fleet1.repair();
-            //   System.out.println("");
             fleet2.repair();
-            //   System.out.println("");
             fleet1.collectFleetStats();
             fleet2.collectFleetStats();
-            //   System.out.println("Fleet 1 Status:");
-            //   fleet1.printOutFleetStats();
-            //   System.out.println("");
-            //   System.out.println("Fleet 2 Status:");
-            //   fleet2.printOutFleetStats();
-            //   System.out.println("");
-            //   System.out.println("");
-            //   System.out.println(""); 
             reports.newReport(counter,fleet1.getholdCount(),fleet1.getShipType(),fleet1.getDamageCount(),fleet1.getMessages(),fleet2.getholdCount(),fleet2.getShipType(),fleet2.getDamageCount(),fleet2.getMessages());
         }while(!fleet1.getFleet().get(0).isEmpty() && !fleet2.getFleet().get(0).isEmpty() && counter < roundLimit);
         //Declare Winner          
-         long endTime   = System.currentTimeMillis();
+        long endTime   = System.currentTimeMillis();
         long totalTime = endTime - startTime;
         if(counter == roundLimit){
-           // System.out.println("Tie after " + counter + " rounds");
             Winner winner = new Winner(0, counter,totalTime);
         }else if(fleet1.getFleet().get(0).isEmpty() && !fleet2.getFleet().get(0).isEmpty()){
             Winner winner = new Winner(2, counter,totalTime);
-          //  System.out.println("Fleet 2 wins after " + counter + " rounds!!!");
         }else if(!fleet1.getFleet().get(0).isEmpty() && fleet2.getFleet().get(0).isEmpty()){
             Winner winner = new Winner(1, counter,totalTime);
-          //  System.out.println("Fleet 1 wins after " + counter + " rounds!!!");
         }else if(fleet1.getFleet().get(0).isEmpty() && fleet2.getFleet().get(0).isEmpty()){
             Winner winner = new Winner(0, counter,totalTime);
-           // System.out.println("Tie after " + counter + " rounds");
         }
         //Show Fleet Statistics
-     //   fleet1.collectFleetStats();
-     //   fleet2.collectFleetStats();
-
-      //  System.out.println("Fleet 1 Status:");
-     //   fleet1.printOutFleetStats();
-     //   System.out.println("");
-      //  System.out.println("Fleet 2 Status:");
-     //   fleet2.printOutFleetStats();
-       
-      //  System.out.println("");
-      //  System.out.println("This simulation took " + (totalTime / 1000.0) + " seconds to run");
         reports.lastVisible();
         reports.setFinal(counter - 1);
     }
@@ -383,4 +358,3 @@ public class CombatSim{
         }
     }
 }
-

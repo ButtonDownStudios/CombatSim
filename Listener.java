@@ -17,6 +17,8 @@ public class Listener extends JLabel implements Observer{
             setText("<html>" + Double.toString((Double) data) + "</html>");
         }else if(data instanceof String){
             setText("<html>" + (String) data + "</html>");
+        }else if(data instanceof Long){
+            setText("<html>" + Long.toString((Long) data) + "</html>");
         }
     }
 }

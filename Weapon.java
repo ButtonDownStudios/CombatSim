@@ -18,13 +18,10 @@ public class Weapon{
     public boolean hit(){
         int hit = 1 + Randomizer.getRgen(100);
 
-        boolean didHit;
         if(hit <= accuracy){
-            didHit = true;
-        }else{
-            didHit = false;
+            return true;
         }
-        return didHit;
+        return false;
     }
     
     public int getPrice(){
@@ -51,4 +48,3 @@ public class Weapon{
         return accuracy;
     }
 }
-

@@ -20,8 +20,10 @@ public class DamageReport{
     private JFrame frame;
     private Container contentPane;
     private JTextField input;
+    private ReportHolder report;
 
-    public DamageReport(int round,int f1holdCount,String[] f1Ships, ArrayList<int[]> f1Count, ArrayList<Message> f1Report,int f2holdCount, String[] f2Ships, ArrayList<int[]> f2Count, ArrayList<Message> f2Report){
+    public DamageReport(ReportHolder report,int round,int f1holdCount,String[] f1Ships, ArrayList<int[]> f1Count, ArrayList<Message> f1Report,int f2holdCount, String[] f2Ships, ArrayList<int[]> f2Count, ArrayList<Message> f2Report){
+        this.report = report;
         this.round = round;
         this.f1Ships = f1Ships;
         this.f1Count = f1Count;
@@ -40,6 +42,7 @@ public class DamageReport{
         contentPane.setLayout(new BorderLayout(6,6));
         fillContent();
         frame.pack();
+        makeVisible();
     }
 
     private void fillContent(){
@@ -160,18 +163,6 @@ public class DamageReport{
         scroll.createVerticalScrollBar();
         center.add(scroll);
         contentPane.add(center, BorderLayout.CENTER);
-        
-        Iterator<Message> i1 = f1Report.iterator();
-        while(i1.hasNext()){
-            Message i = i1.next();
-            i1.remove();
-        }
-        
-        Iterator<Message> i2 = f2Report.iterator();
-        while(i2.hasNext()){
-            Message i = i2.next();
-            i2.remove();
-        }
     }
 
     public void makeVisible(){
@@ -183,15 +174,15 @@ public class DamageReport{
     }
 
     private void decrease(){
-        ReportHolder.newVisible(round - 1);
+        report.newVisible(round - 1);
     }
 
     private void increase(){
-        ReportHolder.newVisible(round + 1);
+        report.newVisible(round + 1);
     }
 
     private void input(int j){
-        ReportHolder.newVisible(j);
+        report.newVisible(j);
     }
 
     public void setInput(int i){
