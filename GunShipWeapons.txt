@@ -10,4 +10,3 @@ Assassin-class Corvette,1,Missile Launcher,6,Dual Turbolaser Turret
 Corellian Gunship,4,Missile Launcher,8,Dual Turbolaser Cannon,6,Quad Laser Cannon
 Old Republic Light Cruiser,2,Dual Turbolaser Battery
 Braha'tok-class Gunship,8,Missile Launcher,8,Dual Turbolaser Cannon
-Fw'sen-class Picket Ship,2,Turbolaser,6,Ion Cannon,2,Laser Cannon

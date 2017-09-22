@@ -22,6 +22,7 @@ public class FleetCreation{
     private JPanel lcChoice;
     private JPanel fChoice;
     private JPanel gChoice;
+    private JPanel frChoice;
     private JPanel hfChoice;
     private JPanel lfChoice;
     private JPanel iChoice;
@@ -42,6 +43,7 @@ public class FleetCreation{
     private JPanel currentLC;
     private JPanel currentF;
     private JPanel currentG;
+    private JPanel currentFr;
     private JPanel currentHF;
     private JPanel currentLF;
     private JPanel currentI;
@@ -68,7 +70,7 @@ public class FleetCreation{
         shipNames = new ArrayList<>();
         shipStats = new ArrayList<ArrayList<ShipStats>>();
 
-        for(int i = 0; i < 11; i++){
+        for(int i = 0; i < 12; i++){
             shipCount.add(new HashMap<String, Integer>());
         }
 
@@ -166,7 +168,7 @@ public class FleetCreation{
         shipCount.get(6).put("Corellian Gunship",0);
         shipCount.get(6).put("Old Republic Light Cruiser",0);
         shipCount.get(6).put("Braha'tok-class Gunship",0);
-        shipCount.get(6).put("Fw'sen-class Picket Ship",0);
+        shipCount.get(11).put("Fw'sen-class Picket Ship",0);
         shipCount.get(7).put("X-Wing",0); 
         shipCount.get(10).put("Y-Wing",0);
         shipCount.get(9).put("A-Wing",0);
@@ -206,8 +208,36 @@ public class FleetCreation{
         shipCount.get(10).put("Hyena-class Bomber",0);
         shipCount.get(7).put("CloakShape Fighter",0);
         shipCount.get(10).put("Miy'til Assault Bomber",0);
+        shipCount.get(1).put("Quasar Fire-class Bulk Cruiser",0);
+        shipCount.get(8).put("Fang Fighter",0);
+        shipCount.get(8).put("Aurek-class Tactical Strikefighter",0);
+        shipCount.get(8).put("Rogue-class Starfighter",0);
+        shipCount.get(8).put("V-19 Torrent Starfighter",0);
+        shipCount.get(7).put("R-41 Starchaser",0);
+        shipCount.get(7).put("StarViper-class Attack Platform",0);
+        shipCount.get(7).put("Rihkxyrk Assault Fighter",0);
+        shipCount.get(7).put("Ixiyen-class Fast Attack Craft",0);
+        shipCount.get(10).put("GAT-12 Skipray Blastboat",0);
+        shipCount.get(8).put("I-7 Howlrunner",0);
+        shipCount.get(11).put("VCX-100 Light Freighter",0);
+        shipCount.get(11).put("YT-2400 Light Freighter",0);
+        shipCount.get(11).put("YT-2000 Light Freighter",0);
+        shipCount.get(11).put("YT-1300 Light Freighter",0);
+        shipCount.get(11).put("YT-1250 Freighter",0);
+        shipCount.get(11).put("Stathas-class Freighter",0);
+        shipCount.get(11).put("MC-18 Light Freighter",0);
+        shipCount.get(11).put("Simiyiar-class Light Freighter",0);
+        shipCount.get(11).put("SS-54 Assault Ship",0);
+        shipCount.get(11).put("Stalwart-class Freighter",0);
+        shipCount.get(11).put("RX4 Patrol Ship",0);
+        shipCount.get(11).put("Mynock-class Assault Boat",0);
+        shipCount.get(11).put("Firespray-31-class Attack Craft",0);
+        shipCount.get(11).put("Pursuer-class Enforcement Ship",0);
+        shipCount.get(11).put("UT-60D U-wing Starfighter",0);
+        shipCount.get(11).put("PB-950 Patrol Boat",0);
+        shipCount.get(11).put("Law-class Light Patrol Craft",0);
 
-        for(int i = 0; i < 11; i++){
+        for(int i = 0; i < 12; i++){
             shipNames.add(new String[ship.get(i).size()]);
             shipStats.add(new ArrayList<ShipStats>());
         }
@@ -288,7 +318,7 @@ public class FleetCreation{
         JPanel outerDivide = new JPanel();
         outerDivide.setLayout(new GridLayout(1,2));
 
-        String[] capTypes = {"Dreadnought","Carrier","Battleship","Heavy Cruiser","Light Cruiser","Frigate","Gunship"};
+        String[] capTypes = {"Dreadnought","Carrier","Battleship","Heavy Cruiser","Light Cruiser","Frigate","Gunship","Freighter/Patrol Ship"};
         JComboBox<String> capChoice = new JComboBox<>(capTypes);
         capChoice.addActionListener((event) -> {
                 chooseCapitalType(capChoice.getSelectedItem());
@@ -340,6 +370,7 @@ public class FleetCreation{
         lcChoice = new JPanel();
         fChoice = new JPanel();
         gChoice = new JPanel();
+        frChoice = new JPanel();
 
         dChoice.setLayout(new BorderLayout());
         cChoice.setLayout(new BorderLayout());
@@ -348,6 +379,7 @@ public class FleetCreation{
         lcChoice.setLayout(new BorderLayout());
         fChoice.setLayout(new BorderLayout());
         gChoice.setLayout(new BorderLayout());
+        frChoice.setLayout(new BorderLayout());
 
         JPanel dChoiceDivide = new JPanel();
         dChoiceDivide.setLayout(new GridLayout(1,2));
@@ -412,6 +444,15 @@ public class FleetCreation{
         gChoiceDivide.add(new JLabel("Gunship Ship Classes:"));
         gChoiceDivide.add(gChoiceNames);
 
+        JPanel frChoiceDivide = new JPanel();
+        frChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> frChoiceNames = new JComboBox<>(shipNames.get(11));
+        frChoiceNames.addActionListener((event) -> {
+                chooseFreighterType(frChoiceNames.getSelectedIndex());
+            });
+        frChoiceDivide.add(new JLabel("Freighter/Patrol Ship Classes:"));
+        frChoiceDivide.add(frChoiceNames);
+
         dChoice.add(dChoiceDivide, BorderLayout.NORTH);
         cChoice.add(cChoiceDivide, BorderLayout.NORTH);
         bsChoice.add(bsChoiceDivide, BorderLayout.NORTH);
@@ -419,6 +460,7 @@ public class FleetCreation{
         lcChoice.add(lcChoiceDivide, BorderLayout.NORTH);
         fChoice.add(fChoiceDivide, BorderLayout.NORTH);
         gChoice.add(gChoiceDivide, BorderLayout.NORTH);
+        frChoice.add(frChoiceDivide, BorderLayout.NORTH);
 
         currentD = new JPanel();
         currentD = shipStats.get(0).get(0).getStats();
@@ -434,6 +476,8 @@ public class FleetCreation{
         currentF = shipStats.get(5).get(0).getStats();
         currentG = new JPanel();
         currentG = shipStats.get(6).get(0).getStats();
+        currentFr = new JPanel();
+        currentFr = shipStats.get(11).get(0).getStats();
 
         dChoice.add(currentD, BorderLayout.CENTER);
         cChoice.add(currentC, BorderLayout.CENTER);
@@ -442,6 +486,7 @@ public class FleetCreation{
         lcChoice.add(currentLC, BorderLayout.CENTER);
         fChoice.add(currentF, BorderLayout.CENTER);
         gChoice.add(currentG, BorderLayout.CENTER);
+        frChoice.add(currentFr, BorderLayout.CENTER);
     }
 
     private void fillFighter(){
@@ -512,7 +557,7 @@ public class FleetCreation{
     }
 
     private void end(){
-        for(int i = 0; i < 11; i++){
+        for(int i = 0; i < 12; i++){
             for(int j = 0; j < ship.get(i).size(); j++){
                 for(int k = 0; k < shipCount.get(i).get(ship.get(i).get(j).getShipClass()); k++){
                     f.addShip(ShipFactory.makeShip(ship.get(i).get(j).getType(), ship.get(i).get(j).getShipClass()));
@@ -605,9 +650,16 @@ public class FleetCreation{
             contentPane.revalidate();
             contentPane.repaint();
             frame.pack();
-        }else{
+        }else if(s.equals("Gunship")){
             left.remove(currentCapital);
             currentCapital = gChoice;
+            left.add(currentCapital, BorderLayout.CENTER);
+            contentPane.revalidate();
+            contentPane.repaint();
+            frame.pack();
+        }else{
+            left.remove(currentCapital);
+            currentCapital = frChoice;
             left.add(currentCapital, BorderLayout.CENTER);
             contentPane.revalidate();
             contentPane.repaint();
@@ -673,6 +725,15 @@ public class FleetCreation{
         gChoice.remove(currentG);
         currentG = shipStats.get(6).get(i).getStats();
         gChoice.add(currentG, BorderLayout.CENTER);
+        contentPane.revalidate();
+        contentPane.repaint();
+        frame.pack();
+    }
+
+    private void chooseFreighterType(int i){
+        frChoice.remove(currentFr);
+        currentFr = shipStats.get(11).get(i).getStats();
+        frChoice.add(currentFr, BorderLayout.CENTER);
         contentPane.revalidate();
         contentPane.repaint();
         frame.pack();

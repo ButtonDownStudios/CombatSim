@@ -42,7 +42,10 @@ Ion Cannon,5,200,5,75
 Light Point-Defense Ion Cannon,3,120,5,95
 Light Ion Cannon,3,120,5,75
 Quad Laser Cannon,80,80,1,65
+Triple Heavy Laser Cannon,84,84,1,75
 Triple Laser Cannon,60,60,1,70
+Dual Heavy Laser Cannon,56,56,1,75
+Dual Medium Laser Cannon,48,48,1,75
 Dual Laser Cannon,40,40,1,75
 Heavy Point-Defense Laser Cannon,28,28,1,95
 Heavy Laser Cannon,28,28,1,80

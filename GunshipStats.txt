@@ -10,4 +10,3 @@ Assassin-class Corvette,2780,1390,0,60
 Corellian Gunship,2400,1200,0,60
 Old Republic Light Cruiser,2040,1020,0,60
 Braha'tok-class Gunship,1800,900,0,60
-Fw'sen-class Picket Ship,900,450,0,60

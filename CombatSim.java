@@ -21,7 +21,7 @@ public class CombatSim{
         ArrayList<ArrayList<Ship>> ship = new ArrayList<ArrayList<Ship>>();
         ReportHolder reports = new ReportHolder();
 
-        for(int i = 0; i < 11; i++){
+        for(int i = 0; i < 12; i++){
             ship.add(new ArrayList<Ship>());
         }
 
@@ -119,7 +119,7 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Corellian Gunship"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Old Republic Light Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Braha'tok-class Gunship"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Fw'sen-class Picket Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Fw'sen-class Picket Ship"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"X-Wing")); 
         shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"Y-Wing"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.INTERCEPTOR,"A-Wing"));
@@ -159,6 +159,34 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"Hyena-class Bomber"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"CloakShape Fighter"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"Miy'til Assault Bomber"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.CARRIER,"Quasar Fire-class Bulk Cruiser"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Fang Fighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Aurek-class Tactical Strikefighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Rogue-class Starfighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"V-19 Torrent Starfighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"R-41 Starchaser"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"StarViper-class Attack Platform"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"Rihkxyrk Assault Fighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"Ixiyen-class Fast Attack Craft"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"GAT-12 Skipray Blastboat"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"I-7 Howlrunner"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"VCX-100 Light Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-2400 Light Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-2000 Light Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-1300 Light Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-1250 Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stathas-class Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"MC-18 Light Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Simiyiar-class Light Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"SS-54 Assault Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stalwart-class Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"RX4 Patrol Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Mynock-class Assault Boat"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Firespray-31-class Attack Craft"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Pursuer-class Enforcement Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"UT-60D U-wing Starfighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"PB-950 Patrol Boat"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Law-class Light Patrol Craft"));
 
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Emperor-class Star Dreadnought"));
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Imperial Dreadnought Cruiser"));
@@ -254,7 +282,7 @@ public class CombatSim{
         ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Corellian Gunship"));
         ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Old Republic Light Cruiser"));
         ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Braha'tok-class Gunship"));
-        ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Fw'sen-class Picket Ship"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Fw'sen-class Picket Ship"));
         ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"X-Wing")); 
         ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"Y-Wing"));
         ship.get(9).add(ShipFactory.makeShip(ShipType.INTERCEPTOR,"A-Wing"));
@@ -294,6 +322,34 @@ public class CombatSim{
         ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"Hyena-class Bomber"));
         ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"CloakShape Fighter"));
         ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"Miy'til Assault Bomber"));
+        ship.get(1).add(ShipFactory.makeShip(ShipType.CARRIER,"Quasar Fire-class Bulk Cruiser"));
+        ship.get(8).add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Fang Fighter"));
+        ship.get(8).add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Aurek-class Tactical Strikefighter"));
+        ship.get(8).add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"Rogue-class Starfighter"));
+        ship.get(8).add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"V-19 Torrent Starfighter"));
+        ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"R-41 Starchaser"));
+        ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"StarViper-class Attack Platform"));
+        ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"Rihkxyrk Assault Fighter"));
+        ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"Ixiyen-class Fast Attack Craft"));
+        ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"GAT-12 Skipray Blastboat"));
+        ship.get(8).add(ShipFactory.makeShip(ShipType.LIGHTFIGHTER,"I-7 Howlrunner"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"VCX-100 Light Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-2400 Light Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-2000 Light Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-1300 Light Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"YT-1250 Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stathas-class Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"MC-18 Light Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Simiyiar-class Light Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"SS-54 Assault Ship"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stalwart-class Freighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"RX4 Patrol Ship"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Mynock-class Assault Boat"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Firespray-31-class Attack Craft"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Pursuer-class Enforcement Ship"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"UT-60D U-wing Starfighter"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"PB-950 Patrol Boat"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Law-class Light Patrol Craft"));
 
         long creditLimit = setup.getCreditLimit();
         int roundLimit = setup.getRoundLimit();

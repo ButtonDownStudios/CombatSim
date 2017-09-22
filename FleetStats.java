@@ -9,7 +9,7 @@ public class FleetStats{
     private JFrame frame;
     public FleetStats(ArrayList<HashMap<String, Integer>> shipCount){
         count = new HashMap<>();
-        for(int i = 0; i < 11; i++){
+        for(int i = 0; i < 12; i++){
             for(Map.Entry<String, Integer> entry : shipCount.get(i).entrySet()) {
                 String type = entry.getKey();
                 Integer number = entry.getValue();

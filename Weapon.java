@@ -5,7 +5,7 @@ public class Weapon{
     private int accuracy;
     private int firerate;
     private int price;
-
+    private boolean disabled;
     public Weapon(String[] stats){
         type = stats[0];
         damageshields = Integer.parseInt(stats[1]);
@@ -13,6 +13,7 @@ public class Weapon{
         firerate = Integer.parseInt(stats[3]);
         accuracy = Integer.parseInt(stats[4]);
         price = damageshields * 10 /firerate * accuracy;
+        disabled = false;
     }
 
     public boolean hit(){
@@ -23,28 +24,36 @@ public class Weapon{
         }
         return false;
     }
-    
+
     public int getPrice(){
         return price;
     }
-    
+
     public int getFirerate(){
         return firerate;
     }
-    
+
     public int getDamageshields(){
         return damageshields;
     }
-    
+
     public int getDamagehull(){
         return damagehull;
     }
-    
+
     public String getType(){
         return type;
     }
-    
+
     public int getAccuracy(){
         return accuracy;
+    }
+
+    public boolean getDisabled(){
+        return disabled;
+    }
+
+    public void setDisabled(boolean working){
+        disabled = working;
     }
 }

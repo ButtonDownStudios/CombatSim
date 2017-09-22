@@ -11,3 +11,8 @@ N-1 Starfighter,1,Proton Torpedo Launcher,2,Laser Cannon
 Vulture-class Droid Starfighter,4,Laser Cannon
 Miy'til Starfighter,1,Missile Launcher,2,Laser Cannon
 Nssis-class Clawcraft,4,Laser Cannon
+Fang Fighter,2,Laser Cannon,1,Proton Torpedo Launcher
+Aurek-class Tactical Strikefighter,2,Heavy Laser Cannon,2,Proton Torpedo Launcher
+Rogue-class Starfighter,2,Laser Cannon
+V-19 Torrent Starfighter,2,Laser Cannon,2,Missile Launcher
+I-7 Howlrunner,2,Laser Cannon

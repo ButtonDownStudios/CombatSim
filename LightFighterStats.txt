@@ -11,3 +11,8 @@ N-1 Starfighter,220,110,15
 Vulture-class Droid Starfighter,70,0,5
 Miy'til Starfighter,150,75,10
 Nssis-class Clawcraft,163,77,10
+Fang Fighter,160,0,10
+Aurek-class Tactical Strikefighter,184,92,10
+Rogue-class Starfighter,254,127,15
+V-19 Torrent Starfighter,120,0,10
+I-7 Howlrunner,228,114,15

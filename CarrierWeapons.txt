@@ -7,3 +7,4 @@ Venator-class Star Destroyer,4,Heavy Proton Torpedo Launcher,2,Dual Medium Turbo
 Endurance-class Fleet Carrier,12,Turbolaser,8,Ion Cannon,20,Laser Cannon
 Defender-class Assault Carrier,20,Laser Cannon
 Escort Carrier,10,Dual Laser Cannon
+Quasar Fire-class Bulk Cruiser,2,Light Turbolaser Battery

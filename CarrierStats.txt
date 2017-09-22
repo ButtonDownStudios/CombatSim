@@ -7,3 +7,4 @@ Venator-class Star Destroyer,22740,11370,420,75
 Endurance-class Fleet Carrier,21600,10400,144,75
 Defender-class Assault Carrier,14000,7000,36,70
 Escort Carrier,10000,5000,60,65
+Quasar Fire-class Bulk Cruiser,6800,3400,48,65

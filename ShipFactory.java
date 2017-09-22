@@ -18,6 +18,8 @@ public class ShipFactory {
             return new CapitalShip(shipType, frigateStat(shipClass), frigateWeapons(shipClass));
             case GUNSHIP:
             return new CapitalShip(shipType, gunshipStat(shipClass), gunshipWeapons(shipClass));
+            case FREIGHTER:
+            return new CapitalShip(shipType, freighterStat(shipClass), freighterWeapons(shipClass));
             case HEAVYFIGHTER:
             return new StarFighter(shipType, heavyfighterStat(shipClass), heavyfighterWeapons(shipClass));
             case LIGHTFIGHTER:
@@ -519,6 +521,78 @@ public class ShipFactory {
                 }
                 // close file stream
                 gunship.close();
+                return null;
+            }
+            catch (IOException ioe)
+            {
+                ioe.printStackTrace();
+                return null;
+            }
+        }
+        catch (FileNotFoundException fnfe)
+        {
+            System.out.println("file not found");
+            return null;
+        }
+    }
+    
+    public static String[] freighterStat(String shipClass){
+        BufferedReader freighter;
+        try{
+            freighter = new BufferedReader(new FileReader("FreighterStats.txt"));
+            try{
+                String fileRead = freighter.readLine();
+                // loop until all lines are read
+                while (fileRead != null){
+                    // use string.split to load a string array with the values from each line of
+                    // the file, using a comma as the delimiter
+                    String[] tokenize = fileRead.split(",");
+                    // assume file is made correctly
+                    String tempRace = tokenize[0];
+                    if(tempRace.equals(shipClass)){
+                        freighter.close();
+                        return tokenize;
+                    }
+                    fileRead = freighter.readLine();
+                }
+                // close file stream
+                freighter.close();
+                return null;
+            }
+            catch (IOException ioe)
+            {
+                ioe.printStackTrace();
+                return null;
+            }
+        }
+        catch (FileNotFoundException fnfe)
+        {
+            System.out.println("file not found");
+            return null;
+        }
+    }
+
+    public static String[] freighterWeapons(String shipClass){
+        BufferedReader freighter;
+        try{
+            freighter = new BufferedReader(new FileReader("FreighterWeapons.txt"));
+            try{
+                String fileRead = freighter.readLine();
+                // loop until all lines are read
+                while (fileRead != null){
+                    // use string.split to load a string array with the values from each line of
+                    // the file, using a comma as the delimiter
+                    String[] tokenize = fileRead.split(",");
+                    // assume file is made correctly
+                    String tempRace = tokenize[0];
+                    if(tempRace.equals(shipClass)){
+                        freighter.close();
+                        return tokenize;
+                    }
+                    fileRead = freighter.readLine();
+                }
+                // close file stream
+                freighter.close();
                 return null;
             }
             catch (IOException ioe)

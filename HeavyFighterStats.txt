@@ -6,3 +6,7 @@ TIE Defender,184,92,10
 Reborn Sith Heavy Fighter,290,145,15
 Aleph-class Starfighter,360,180,20
 CloakShape Fighter,300,0,20
+R-41 Starchaser,326,163,20
+StarViper-class Attack Platform,180,90,15
+Rihkxyrk Assault Fighter,360,180,20
+Ixiyen-class Fast Attack Craft,400,200,20

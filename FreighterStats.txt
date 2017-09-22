@@ -1,0 +1,18 @@
+VCX-100 Light Freighter,878,439,1,40
+YT-2400 Light Freighter,420,210,0,25
+YT-2000 Light Freighter,588,294,0,30
+YT-1300 Light Freighter,756,378,0,40
+YT-1250 Freighter,646,323,0,50,35
+Stathas-class Freighter,580,290,0,30
+MC-18 Light Freighter,472,236,0,25
+Simiyiar-class Light Freighter,526,263,0,30
+SS-54 Assault Ship,484,242,0,25
+Stalwart-class Freighter,394,197,0,20
+RX4 Patrol Ship,660,330,0,35
+Mynock-class Assault Boat,880,440,0,40
+Firespray-31-class Attack Craft,430,215,0,25
+Pursuer-class Enforcement Ship,602,301,0,35
+UT-60D U-wing Starfighter,500,250,0,25
+PB-950 Patrol Boat,740,370,0,40
+Law-class Light Patrol Craft,1020,510,0,60
+Fw'sen-class Picket Ship,900,450,0,60

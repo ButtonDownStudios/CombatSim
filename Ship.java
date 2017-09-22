@@ -35,11 +35,18 @@ public abstract class Ship{
 
     public void fire(int counter){
         for(int l = 0; l < weapons.size(); l++){
-            if(counter % (weapons.get(l).getFirerate()) == 0 && weapons.get(l).hit() && target.isHit()){
+            if(weapons.get(l).getDisabled()){
+                if(Randomizer.getRgen(101) <= 20){
+                    weapons.get(l).setDisabled(false);
+                }
+            }else if(counter % (weapons.get(l).getFirerate()) == 0 && weapons.get(l).hit() && target.isHit() && !(weapons.get(l).getDisabled())){
                 if(target.damagedShields - target.shieldDamage > 0){
                     target.shieldDamage = target.shieldDamage + weapons.get(l).getDamageshields();
                 }else{
                     target.hullDamage = target.hullDamage + weapons.get(l).getDamagehull();
+                }
+                if(weapons.get(l).getType().contains("Ion")){
+                    target.disabledWeapons();
                 }
             }
         }
@@ -255,6 +262,14 @@ public abstract class Ship{
             }else{
                 damagedHull = damagedHull + (hull / 40);
             }  
+        }
+    }
+    
+    public void disabledWeapons(){
+        for(Weapon w : weapons){
+            if(Randomizer.getRgen(101) <= 5){
+                w.setDisabled(true);
+            }
         }
     }
 }
