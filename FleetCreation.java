@@ -23,10 +23,13 @@ public class FleetCreation{
     private JPanel fChoice;
     private JPanel gChoice;
     private JPanel frChoice;
+    private JPanel pChoice;
+    private JPanel tChoice;
     private JPanel hfChoice;
     private JPanel lfChoice;
     private JPanel iChoice;
     private JPanel bChoice;
+    private JPanel sChoice;
 
     private ArrayList<ArrayList<Ship>> ship;
     private ArrayList<HashMap<String, Integer>> shipCount;
@@ -44,19 +47,26 @@ public class FleetCreation{
     private JPanel currentF;
     private JPanel currentG;
     private JPanel currentFr;
+    private JPanel currentP;
+    private JPanel currentT;
     private JPanel currentHF;
     private JPanel currentLF;
     private JPanel currentI;
     private JPanel currentB;
+    private JPanel currentS;
 
     private JPanel innerCap;
     private JPanel innerStar;
 
     private static int hangarSpace;
+    private static int shuttleSpace;
+    private static int currentTroops;
     private static long currentCost;
 
     private static CreditUpdater creditUpdate;
     private static HangarUpdater hangarUpdate;
+    private static ShuttleUpdater shuttleUpdate;
+    private static TroopUpdater troopUpdate;
 
     public FleetCreation(String fleet, Fleet f, ArrayList<ArrayList<Ship>> ship){
         end = false;
@@ -64,13 +74,15 @@ public class FleetCreation{
 
         currentCost = f.getCreditLimit();
         hangarSpace = 0;
+        shuttleSpace = 0;
+        currentTroops = 0;
 
         this.ship = ship;
         shipCount = new ArrayList<HashMap<String, Integer>>();
         shipNames = new ArrayList<>();
         shipStats = new ArrayList<ArrayList<ShipStats>>();
 
-        for(int i = 0; i < 12; i++){
+        for(int i = 0; i < 15; i++){
             shipCount.add(new HashMap<String, Integer>());
         }
 
@@ -116,7 +128,7 @@ public class FleetCreation{
         shipCount.get(3).put("Munificent-class Star Frigate",0);
         shipCount.get(3).put("Reborn Sith Heavy Cruiser",0);
         shipCount.get(3).put("Banking Clan Cruiser",0);
-        shipCount.get(4).put("Republic Assault Ship",0);
+        shipCount.get(13).put("Republic Assault Ship",0);
         shipCount.get(1).put("Defender-class Assault Carrier",0);
         shipCount.get(3).put("Shunan Assault Destroyer",0);
         shipCount.get(3).put("Assault Frigate",0); 
@@ -124,7 +136,7 @@ public class FleetCreation{
         shipCount.get(3).put("Dragon-class Heavy Cruiser",0);
         shipCount.get(3).put("Dreadnought-class Heavy Cruiser",0);
         shipCount.get(3).put("Vindicator-class Heavy Cruiser",0);
-        shipCount.get(4).put("Tartan-class Patrol Cruiser",0);
+        shipCount.get(5).put("Tartan-class Patrol Cruiser",0);
         shipCount.get(4).put("Enforcer-class Patrol Cruiser",0); 
         shipCount.get(4).put("Immobilizer 418 Cruiser",0);
         shipCount.get(4).put("Interdictor-class Cruiser",0);
@@ -168,7 +180,7 @@ public class FleetCreation{
         shipCount.get(6).put("Corellian Gunship",0);
         shipCount.get(6).put("Old Republic Light Cruiser",0);
         shipCount.get(6).put("Braha'tok-class Gunship",0);
-        shipCount.get(11).put("Fw'sen-class Picket Ship",0);
+        shipCount.get(12).put("Fw'sen-class Picket Ship",0);
         shipCount.get(7).put("X-Wing",0); 
         shipCount.get(10).put("Y-Wing",0);
         shipCount.get(9).put("A-Wing",0);
@@ -227,17 +239,48 @@ public class FleetCreation{
         shipCount.get(11).put("Stathas-class Freighter",0);
         shipCount.get(11).put("MC-18 Light Freighter",0);
         shipCount.get(11).put("Simiyiar-class Light Freighter",0);
-        shipCount.get(11).put("SS-54 Assault Ship",0);
+        shipCount.get(12).put("SS-54 Assault Ship",0);
         shipCount.get(11).put("Stalwart-class Freighter",0);
-        shipCount.get(11).put("RX4 Patrol Ship",0);
-        shipCount.get(11).put("Mynock-class Assault Boat",0);
-        shipCount.get(11).put("Firespray-31-class Attack Craft",0);
-        shipCount.get(11).put("Pursuer-class Enforcement Ship",0);
-        shipCount.get(11).put("UT-60D U-wing Starfighter",0);
-        shipCount.get(11).put("PB-950 Patrol Boat",0);
-        shipCount.get(11).put("Law-class Light Patrol Craft",0);
+        shipCount.get(12).put("RX4 Patrol Ship",0);
+        shipCount.get(12).put("Mynock-class Assault Boat",0);
+        shipCount.get(12).put("Firespray-31-class Attack Craft",0);
+        shipCount.get(12).put("Pursuer-class Enforcement Ship",0);
+        shipCount.get(13).put("UT-60D U-wing Starfighter",0);
+        shipCount.get(12).put("PB-950 Patrol Boat",0);
+        shipCount.get(12).put("Law-class Light Patrol Craft",0);
+        shipCount.get(13).put("Beta-class ETR-3 Escort Transport",0);
+        shipCount.get(13).put("Delta-class DX-9 Stormtrooper Transport",0);
+        shipCount.get(13).put("Etti Lighter",0);
+        shipCount.get(13).put("Gamma-class ATR-6 Assault Transport",0);
+        shipCount.get(13).put("GR-75 Medium Transport",0);
+        shipCount.get(13).put("ILH-KK Citadel-class Civilian Cruiser",0);
+        shipCount.get(13).put("Kom'rk-class Transport",0);
+        shipCount.get(13).put("Loronar Medium Transport",0);
+        shipCount.get(13).put("Mobquet Medium Transport",0);
+        shipCount.get(13).put("Seltiss-1 Caravel",0);
+        shipCount.get(13).put("Shaadlar-type Troopship",0);
+        shipCount.get(13).put("VT-49 Decimator",0);
+        shipCount.get(13).put("Wayfarer-class Medium Transport",0);
+        shipCount.get(13).put("YZ-775 Medium Transport",0);
+        shipCount.get(14).put("Lambda-class T-4a Shuttle",0);
+        shipCount.get(14).put("Aegis-class Combat Shuttle",0);
+        shipCount.get(14).put("Delta-class JV-7 Escort Shuttle",0);
+        shipCount.get(14).put("Flarestar-class Attack Shuttle",0);
+        shipCount.get(14).put("Nu-class Attack Shuttle",0);
+        shipCount.get(14).put("Sentinel-class Landing Craft",0);
+        shipCount.get(14).put("Upsilon-class Command Shuttle",0);
+        shipCount.get(14).put("Sheathipede-class Transport Shuttle",0);
+        shipCount.get(14).put("Sigma-class Shuttle",0);
+        shipCount.get(14).put("Low Altitude Assault Transport",0);
+        shipCount.get(14).put("BR-23 Courier",0);
+        shipCount.get(14).put("Y-4 Raptor-class Transport",0);
+        shipCount.get(13).put("CR25 Troop Carrier",0);
+        shipCount.get(11).put("YV-865 Aurore-class Freighter",0);
+        shipCount.get(5).put("Pelta-class Frigate",0);
+        shipCount.get(6).put("Consular-class Cruiser",0);
+        shipCount.get(14).put("Delta-class T-3c Shuttle",0);
 
-        for(int i = 0; i < 12; i++){
+        for(int i = 0; i < 15; i++){
             shipNames.add(new String[ship.get(i).size()]);
             shipStats.add(new ArrayList<ShipStats>());
         }
@@ -278,13 +321,19 @@ public class FleetCreation{
 
         JPanel south = new JPanel();
         south.setLayout(new GridLayout(2,1));
-
         JPanel north = new JPanel();
         north.setLayout(new GridLayout(1,3));
 
+        JLabel money = new JLabel();
+        money.setLayout(new GridLayout(1,2));
+
         creditUpdate = new CreditUpdater(currentCost);
         creditUpdate.display();
-        north.add(creditUpdate);
+        money.add(creditUpdate);
+        troopUpdate = new TroopUpdater(currentTroops);
+        troopUpdate.display();
+        money.add(troopUpdate);
+        north.add(money);
 
         JButton check = new JButton("Check Fleet");
         check.addActionListener((event) -> {
@@ -292,9 +341,16 @@ public class FleetCreation{
             });
         north.add(check);
 
+        JPanel hangar = new JPanel();
+        hangar.setLayout(new GridLayout(1,2));
+
         hangarUpdate = new HangarUpdater(hangarSpace);
+        shuttleUpdate = new ShuttleUpdater(shuttleSpace);
         hangarUpdate.display();
-        north.add(hangarUpdate);
+        shuttleUpdate.display();
+        hangar.add(hangarUpdate);
+        hangar.add(shuttleUpdate);
+        north.add(hangar);
 
         south.add(north);
 
@@ -318,7 +374,7 @@ public class FleetCreation{
         JPanel outerDivide = new JPanel();
         outerDivide.setLayout(new GridLayout(1,2));
 
-        String[] capTypes = {"Dreadnought","Carrier","Battleship","Heavy Cruiser","Light Cruiser","Frigate","Gunship","Freighter/Patrol Ship"};
+        String[] capTypes = {"Dreadnought","Carrier","Battleship","Heavy Cruiser","Light Cruiser","Frigate","Gunship","Freighter","Patrol Ship","Transport"};
         JComboBox<String> capChoice = new JComboBox<>(capTypes);
         capChoice.addActionListener((event) -> {
                 chooseCapitalType(capChoice.getSelectedItem());
@@ -342,7 +398,7 @@ public class FleetCreation{
         JPanel outerDivide = new JPanel();
         outerDivide.setLayout(new GridLayout(1,2));
 
-        String[] starTypes = {"Heavy Fighter","Light Fighter","Interceptor","Bomber"};
+        String[] starTypes = {"Heavy Fighter","Light Fighter","Interceptor","Bomber","Shuttle"};
         JComboBox<String> starChoice = new JComboBox<>(starTypes);
         starChoice.addActionListener((event) -> {
                 chooseFighterType(starChoice.getSelectedItem());
@@ -371,87 +427,109 @@ public class FleetCreation{
         fChoice = new JPanel();
         gChoice = new JPanel();
         frChoice = new JPanel();
+        pChoice = new JPanel();
+        tChoice = new JPanel();
 
-        dChoice.setLayout(new BorderLayout());
+        dChoice.setLayout(new BorderLayout());;
         cChoice.setLayout(new BorderLayout());
-        bsChoice.setLayout(new BorderLayout());
-        hcChoice.setLayout(new BorderLayout());
-        lcChoice.setLayout(new BorderLayout());
-        fChoice.setLayout(new BorderLayout());
-        gChoice.setLayout(new BorderLayout());
-        frChoice.setLayout(new BorderLayout());
+        bsChoice.setLayout(new BorderLayout());;
+        hcChoice.setLayout(new BorderLayout());;
+        lcChoice.setLayout(new BorderLayout());;
+        fChoice.setLayout(new BorderLayout());;
+        gChoice.setLayout(new BorderLayout());;
+        frChoice.setLayout(new BorderLayout());;
+        pChoice.setLayout(new BorderLayout());;
+        tChoice.setLayout(new BorderLayout());;
 
         JPanel dChoiceDivide = new JPanel();
-        dChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> dChoiceNames = new JComboBox<>(shipNames.get(0));
+        dChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> dChoiceNames = new JComboBox<>(shipNames.get(0));;
         dChoiceNames.addActionListener((event) -> {
-                chooseDreadnoughtType(dChoiceNames.getSelectedIndex());
+                chooseDreadnoughtType(dChoiceNames.getSelectedIndex());;
             });
-        dChoiceDivide.add(new JLabel("Dreadnought Ship Classes:"));
+        dChoiceDivide.add(new JLabel("Dreadnought Ship Classes:"));;
         dChoiceDivide.add(dChoiceNames);
 
         JPanel cChoiceDivide = new JPanel();
-        cChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> cChoiceNames = new JComboBox<>(shipNames.get(1));
+        cChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> cChoiceNames = new JComboBox<>(shipNames.get(1));;
         cChoiceNames.addActionListener((event) -> {
-                chooseCarrierType(cChoiceNames.getSelectedIndex());
+                chooseCarrierType(cChoiceNames.getSelectedIndex());;
             });
-        cChoiceDivide.add(new JLabel("Carrier Ship Classes:"));
+        cChoiceDivide.add(new JLabel("Carrier Ship Classes:"));;
         cChoiceDivide.add(cChoiceNames);
 
         JPanel bsChoiceDivide = new JPanel();
-        bsChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> bsChoiceNames = new JComboBox<>(shipNames.get(2));
+        bsChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> bsChoiceNames = new JComboBox<>(shipNames.get(2));;
         bsChoiceNames.addActionListener((event) -> {
-                chooseBattleshipType(bsChoiceNames.getSelectedIndex());
+                chooseBattleshipType(bsChoiceNames.getSelectedIndex());;
             });
-        bsChoiceDivide.add(new JLabel("Battleship Ship Classes:"));
+        bsChoiceDivide.add(new JLabel("Battleship Ship Classes:"));;
         bsChoiceDivide.add(bsChoiceNames);
 
         JPanel hcChoiceDivide = new JPanel();
-        hcChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> hcChoiceNames = new JComboBox<>(shipNames.get(3));
+        hcChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> hcChoiceNames = new JComboBox<>(shipNames.get(3));;
         hcChoiceNames.addActionListener((event) -> {
-                chooseHeavyCruiserType(hcChoiceNames.getSelectedIndex());
+                chooseHeavyCruiserType(hcChoiceNames.getSelectedIndex());;
             });
-        hcChoiceDivide.add(new JLabel("Heavy Cruiser Ship Classes:"));
+        hcChoiceDivide.add(new JLabel("Heavy Cruiser Ship Classes:"));;
         hcChoiceDivide.add(hcChoiceNames);
 
         JPanel lcChoiceDivide = new JPanel();
-        lcChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> lcChoiceNames = new JComboBox<>(shipNames.get(4));
+        lcChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> lcChoiceNames = new JComboBox<>(shipNames.get(4));;
         lcChoiceNames.addActionListener((event) -> {
-                chooseLightCruiserType(lcChoiceNames.getSelectedIndex());
+                chooseLightCruiserType(lcChoiceNames.getSelectedIndex());;
             });
-        lcChoiceDivide.add(new JLabel("Light Cruiser Ship Classes:"));
+        lcChoiceDivide.add(new JLabel("Light Cruiser Ship Classes:"));;
         lcChoiceDivide.add(lcChoiceNames);
 
         JPanel fChoiceDivide = new JPanel();
-        fChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> fChoiceNames = new JComboBox<>(shipNames.get(5));
+        fChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> fChoiceNames = new JComboBox<>(shipNames.get(5));;
         fChoiceNames.addActionListener((event) -> {
-                chooseFrigateType(fChoiceNames.getSelectedIndex());
+                chooseFrigateType(fChoiceNames.getSelectedIndex());;
             });
-        fChoiceDivide.add(new JLabel("Frigate Ship Classes:"));
+        fChoiceDivide.add(new JLabel("Frigate Ship Classes:"));;
         fChoiceDivide.add(fChoiceNames);
 
         JPanel gChoiceDivide = new JPanel();
-        gChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> gChoiceNames = new JComboBox<>(shipNames.get(6));
+        gChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> gChoiceNames = new JComboBox<>(shipNames.get(6));;
         gChoiceNames.addActionListener((event) -> {
-                chooseGunshipType(gChoiceNames.getSelectedIndex());
+                chooseGunshipType(gChoiceNames.getSelectedIndex());;
             });
-        gChoiceDivide.add(new JLabel("Gunship Ship Classes:"));
+        gChoiceDivide.add(new JLabel("Gunship Ship Classes:"));;
         gChoiceDivide.add(gChoiceNames);
 
         JPanel frChoiceDivide = new JPanel();
-        frChoiceDivide.setLayout(new GridLayout(1,2));
-        JComboBox<String> frChoiceNames = new JComboBox<>(shipNames.get(11));
+        frChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> frChoiceNames = new JComboBox<>(shipNames.get(11));;
         frChoiceNames.addActionListener((event) -> {
-                chooseFreighterType(frChoiceNames.getSelectedIndex());
+                chooseFreighterType(frChoiceNames.getSelectedIndex());;
             });
-        frChoiceDivide.add(new JLabel("Freighter/Patrol Ship Classes:"));
+        frChoiceDivide.add(new JLabel("Freighter Ship Classes:"));;
         frChoiceDivide.add(frChoiceNames);
+
+        JPanel pChoiceDivide = new JPanel();
+        pChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> pChoiceNames = new JComboBox<>(shipNames.get(12));;
+        pChoiceNames.addActionListener((event) -> {
+                choosePatrolType(pChoiceNames.getSelectedIndex());;
+            });
+        pChoiceDivide.add(new JLabel("Patrol Ship Classes:"));;
+        pChoiceDivide.add(pChoiceNames);
+
+        JPanel tChoiceDivide = new JPanel();
+        tChoiceDivide.setLayout(new GridLayout(1,2));;
+        JComboBox<String> tChoiceNames = new JComboBox<>(shipNames.get(13));;
+        tChoiceNames.addActionListener((event) -> {
+                chooseTransportType(tChoiceNames.getSelectedIndex());;
+            });
+        tChoiceDivide.add(new JLabel("Transport Ship Classes:"));;
+        tChoiceDivide.add(tChoiceNames);
 
         dChoice.add(dChoiceDivide, BorderLayout.NORTH);
         cChoice.add(cChoiceDivide, BorderLayout.NORTH);
@@ -461,6 +539,8 @@ public class FleetCreation{
         fChoice.add(fChoiceDivide, BorderLayout.NORTH);
         gChoice.add(gChoiceDivide, BorderLayout.NORTH);
         frChoice.add(frChoiceDivide, BorderLayout.NORTH);
+        pChoice.add(pChoiceDivide, BorderLayout.NORTH);
+        tChoice.add(tChoiceDivide, BorderLayout.NORTH);
 
         currentD = new JPanel();
         currentD = shipStats.get(0).get(0).getStats();
@@ -478,6 +558,10 @@ public class FleetCreation{
         currentG = shipStats.get(6).get(0).getStats();
         currentFr = new JPanel();
         currentFr = shipStats.get(11).get(0).getStats();
+        currentP = new JPanel();
+        currentP = shipStats.get(12).get(0).getStats();
+        currentT = new JPanel();
+        currentT = shipStats.get(13).get(0).getStats();
 
         dChoice.add(currentD, BorderLayout.CENTER);
         cChoice.add(currentC, BorderLayout.CENTER);
@@ -487,6 +571,8 @@ public class FleetCreation{
         fChoice.add(currentF, BorderLayout.CENTER);
         gChoice.add(currentG, BorderLayout.CENTER);
         frChoice.add(currentFr, BorderLayout.CENTER);
+        pChoice.add(currentP, BorderLayout.CENTER);
+        tChoice.add(currentT, BorderLayout.CENTER);
     }
 
     private void fillFighter(){
@@ -494,14 +580,16 @@ public class FleetCreation{
         lfChoice = new JPanel();
         iChoice = new JPanel();
         bChoice = new JPanel();
+        sChoice = new JPanel();
 
-        hfChoice.setLayout(new BorderLayout());
-        lfChoice.setLayout(new BorderLayout());
-        iChoice.setLayout(new BorderLayout());
-        bChoice.setLayout(new BorderLayout());
+        hfChoice.setLayout(new BorderLayout());;
+        lfChoice.setLayout(new BorderLayout());;
+        iChoice.setLayout(new BorderLayout());;
+        bChoice.setLayout(new BorderLayout());;
+        sChoice.setLayout(new BorderLayout());;
 
         JPanel hfChoiceDivide = new JPanel();
-        hfChoiceDivide.setLayout(new GridLayout(1,2));
+        hfChoiceDivide.setLayout(new GridLayout(1,2));;
         JComboBox<String> hfChoiceNames = new JComboBox<>(shipNames.get(7));
         hfChoiceNames.addActionListener((event) -> {
                 chooseHeavyFighterType(hfChoiceNames.getSelectedIndex());
@@ -536,10 +624,20 @@ public class FleetCreation{
         bChoiceDivide.add(new JLabel("Bomber Ship Classes:"));
         bChoiceDivide.add(bChoiceNames);
 
+        JPanel sChoiceDivide = new JPanel();
+        sChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> sChoiceNames = new JComboBox<>(shipNames.get(14));
+        sChoiceNames.addActionListener((event) -> {
+                chooseShuttleType(sChoiceNames.getSelectedIndex());
+            });
+        sChoiceDivide.add(new JLabel("Shuttle Ship Classes:"));
+        sChoiceDivide.add(sChoiceNames);
+
         hfChoice.add(hfChoiceDivide, BorderLayout.NORTH);
         lfChoice.add(lfChoiceDivide, BorderLayout.NORTH);
         iChoice.add(iChoiceDivide, BorderLayout.NORTH);
         bChoice.add(bChoiceDivide, BorderLayout.NORTH);
+        sChoice.add(sChoiceDivide, BorderLayout.NORTH);
 
         currentHF = new JPanel();
         currentHF = shipStats.get(7).get(0).getStats();
@@ -549,21 +647,25 @@ public class FleetCreation{
         currentI = shipStats.get(9).get(0).getStats();
         currentB = new JPanel();
         currentB = shipStats.get(10).get(0).getStats();
+        currentS = new JPanel();
+        currentS = shipStats.get(14).get(0).getStats();
 
         hfChoice.add(currentHF, BorderLayout.CENTER);
         lfChoice.add(currentLF, BorderLayout.CENTER);
         iChoice.add(currentI, BorderLayout.CENTER);
         bChoice.add(currentB, BorderLayout.CENTER);
+        sChoice.add(currentS, BorderLayout.CENTER);
     }
 
     private void end(){
-        for(int i = 0; i < 12; i++){
+        for(int i = 0; i < 15; i++){
             for(int j = 0; j < ship.get(i).size(); j++){
                 for(int k = 0; k < shipCount.get(i).get(ship.get(i).get(j).getShipClass()); k++){
                     f.addShip(ShipFactory.makeShip(ship.get(i).get(j).getType(), ship.get(i).get(j).getShipClass()));
                 }
             }
         }
+        f.setSpaceTroops(currentTroops);
         end = true;
     }
 
@@ -593,9 +695,16 @@ public class FleetCreation{
             contentPane.revalidate();
             contentPane.repaint();
             frame.pack();
-        }else{
+        }else if(s.equals("Bomber")){
             right.remove(currentFighter);
             currentFighter = bChoice;
+            right.add(currentFighter, BorderLayout.CENTER);
+            contentPane.revalidate();
+            contentPane.repaint();
+            frame.pack();
+        }else{
+            right.remove(currentFighter);
+            currentFighter = sChoice;
             right.add(currentFighter, BorderLayout.CENTER);
             contentPane.revalidate();
             contentPane.repaint();
@@ -657,9 +766,23 @@ public class FleetCreation{
             contentPane.revalidate();
             contentPane.repaint();
             frame.pack();
-        }else{
+        }else if(s.equals("Freighter")){
             left.remove(currentCapital);
             currentCapital = frChoice;
+            left.add(currentCapital, BorderLayout.CENTER);
+            contentPane.revalidate();
+            contentPane.repaint();
+            frame.pack();
+        }else if(s.equals("Patrol Ship")){
+            left.remove(currentCapital);
+            currentCapital = pChoice;
+            left.add(currentCapital, BorderLayout.CENTER);
+            contentPane.revalidate();
+            contentPane.repaint();
+            frame.pack();
+        }else{
+            left.remove(currentCapital);
+            currentCapital = tChoice;
             left.add(currentCapital, BorderLayout.CENTER);
             contentPane.revalidate();
             contentPane.repaint();
@@ -739,6 +862,24 @@ public class FleetCreation{
         frame.pack();
     }
 
+    private void choosePatrolType(int i){
+        pChoice.remove(currentP);
+        currentP = shipStats.get(12).get(i).getStats();
+        pChoice.add(currentP, BorderLayout.CENTER);
+        contentPane.revalidate();
+        contentPane.repaint();
+        frame.pack();
+    }
+
+    private void chooseTransportType(int i){
+        tChoice.remove(currentT);
+        currentT = shipStats.get(13).get(i).getStats();
+        tChoice.add(currentT, BorderLayout.CENTER);
+        contentPane.revalidate();
+        contentPane.repaint();
+        frame.pack();
+    }
+
     private void chooseHeavyFighterType(int i){
         hfChoice.remove(currentHF);
         currentHF = shipStats.get(7).get(i).getStats();
@@ -775,6 +916,15 @@ public class FleetCreation{
         frame.pack();
     }
 
+    private void chooseShuttleType(int i){
+        sChoice.remove(currentS);
+        currentS = shipStats.get(14).get(i).getStats();
+        sChoice.add(currentS, BorderLayout.CENTER);
+        contentPane.revalidate();
+        contentPane.repaint();
+        frame.pack();
+    }
+
     public boolean getEnd(){
         return end;
     }
@@ -794,9 +944,31 @@ public class FleetCreation{
         hangarUpdate.update(hangarSpace);
     }
 
+    public static void setShuttles(int code, int space, int old, int knew){
+        if(code == 0){
+            shuttleSpace -= (old * space);
+            shuttleSpace += (knew * space);
+        }else{
+            shuttleSpace += old;
+            shuttleSpace -= knew;
+        }
+        shuttleUpdate.update(shuttleSpace);
+    }
+
+    public static void setTroops(int code, int space, int old, int knew){
+        if(code == 0){
+            currentTroops -= (old * space);
+            currentTroops += (knew * space);
+        }else{
+            currentTroops += old;
+            currentTroops -= knew;
+        }
+        troopUpdate.update(currentTroops);
+    }
+
     public static void setCredits(int old, int knew, int cost){
         currentCost += (old * cost);
         currentCost -= (knew * cost);
         creditUpdate.update(currentCost);
-    }	
+    }   
 }

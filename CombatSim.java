@@ -21,7 +21,7 @@ public class CombatSim{
         ArrayList<ArrayList<Ship>> ship = new ArrayList<ArrayList<Ship>>();
         ReportHolder reports = new ReportHolder();
 
-        for(int i = 0; i < 12; i++){
+        for(int i = 0; i < 15; i++){
             ship.add(new ArrayList<Ship>());
         }
 
@@ -67,7 +67,7 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Munificent-class Star Frigate"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Reborn Sith Heavy Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Banking Clan Cruiser"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Republic Assault Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Republic Assault Ship"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.CARRIER,"Defender-class Assault Carrier"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Shunan Assault Destroyer"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Assault Frigate")); 
@@ -75,7 +75,7 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Dragon-class Heavy Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Dreadnought-class Heavy Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Vindicator-class Heavy Cruiser"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Tartan-class Patrol Cruiser"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FRIGATE,"Tartan-class Patrol Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Enforcer-class Patrol Cruiser")); 
         shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Immobilizer 418 Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Interdictor-class Cruiser"));
@@ -119,7 +119,7 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Corellian Gunship"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Old Republic Light Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Braha'tok-class Gunship"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Fw'sen-class Picket Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"Fw'sen-class Picket Ship"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"X-Wing")); 
         shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"Y-Wing"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.INTERCEPTOR,"A-Wing"));
@@ -178,15 +178,46 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stathas-class Freighter"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"MC-18 Light Freighter"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Simiyiar-class Light Freighter"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"SS-54 Assault Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"SS-54 Assault Ship"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stalwart-class Freighter"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"RX4 Patrol Ship"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Mynock-class Assault Boat"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Firespray-31-class Attack Craft"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Pursuer-class Enforcement Ship"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"UT-60D U-wing Starfighter"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"PB-950 Patrol Boat"));
-        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"Law-class Light Patrol Craft"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"RX4 Patrol Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"Mynock-class Assault Boat"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"Firespray-31-class Attack Craft"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"Pursuer-class Enforcement Ship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"UT-60D U-wing Starfighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"PB-950 Patrol Boat"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.PATROL,"Law-class Light Patrol Craft"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Beta-class ETR-3 Escort Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Delta-class DX-9 Stormtrooper Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Etti Lighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Gamma-class ATR-6 Assault Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"GR-75 Medium Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"ILH-KK Citadel-class Civilian Cruiser"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Kom'rk-class Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Loronar Medium Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Mobquet Medium Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Seltiss-1 Caravel"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Shaadlar-type Troopship"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"VT-49 Decimator"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Wayfarer-class Medium Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"YZ-775 Medium Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Lambda-class T-4a Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Aegis-class Combat Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Delta-class JV-7 Escort Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Flarestar-class Attack Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Nu-class Attack Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Sentinel-class Landing Craft"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Upsilon-class Command Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Sheathipede-class Transport Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Sigma-class Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Low Altitude Assault Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"BR-23 Courier"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Y-4 Raptor-class Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"CR25 Troop Carrier"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FREIGHTER,"YV-865 Aurore-class Freighter"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.FRIGATE,"Pelta-class Frigate"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Consular-class Cruiser"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Delta-class T-3c Shuttle"));
 
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Emperor-class Star Dreadnought"));
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Imperial Dreadnought Cruiser"));
@@ -230,7 +261,7 @@ public class CombatSim{
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Munificent-class Star Frigate"));
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Reborn Sith Heavy Cruiser"));
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Banking Clan Cruiser"));
-        ship.get(4).add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Republic Assault Ship"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Republic Assault Ship"));
         ship.get(1).add(ShipFactory.makeShip(ShipType.CARRIER,"Defender-class Assault Carrier"));
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Shunan Assault Destroyer"));
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Assault Frigate")); 
@@ -238,7 +269,7 @@ public class CombatSim{
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Dragon-class Heavy Cruiser"));
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Dreadnought-class Heavy Cruiser"));
         ship.get(3).add(ShipFactory.makeShip(ShipType.HEAVYCRUISER,"Vindicator-class Heavy Cruiser"));
-        ship.get(4).add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Tartan-class Patrol Cruiser"));
+        ship.get(5).add(ShipFactory.makeShip(ShipType.FRIGATE,"Tartan-class Patrol Cruiser"));
         ship.get(4).add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Enforcer-class Patrol Cruiser")); 
         ship.get(4).add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Immobilizer 418 Cruiser"));
         ship.get(4).add(ShipFactory.makeShip(ShipType.LIGHTCRUISER,"Interdictor-class Cruiser"));
@@ -282,7 +313,7 @@ public class CombatSim{
         ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Corellian Gunship"));
         ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Old Republic Light Cruiser"));
         ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Braha'tok-class Gunship"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Fw'sen-class Picket Ship"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"Fw'sen-class Picket Ship"));
         ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"X-Wing")); 
         ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"Y-Wing"));
         ship.get(9).add(ShipFactory.makeShip(ShipType.INTERCEPTOR,"A-Wing"));
@@ -341,15 +372,46 @@ public class CombatSim{
         ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stathas-class Freighter"));
         ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"MC-18 Light Freighter"));
         ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Simiyiar-class Light Freighter"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"SS-54 Assault Ship"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"SS-54 Assault Ship"));
         ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Stalwart-class Freighter"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"RX4 Patrol Ship"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Mynock-class Assault Boat"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Firespray-31-class Attack Craft"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Pursuer-class Enforcement Ship"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"UT-60D U-wing Starfighter"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"PB-950 Patrol Boat"));
-        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"Law-class Light Patrol Craft"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"RX4 Patrol Ship"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"Mynock-class Assault Boat"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"Firespray-31-class Attack Craft"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"Pursuer-class Enforcement Ship"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"UT-60D U-wing Starfighter"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"PB-950 Patrol Boat"));
+        ship.get(12).add(ShipFactory.makeShip(ShipType.PATROL,"Law-class Light Patrol Craft"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Beta-class ETR-3 Escort Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Delta-class DX-9 Stormtrooper Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Etti Lighter"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Gamma-class ATR-6 Assault Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"GR-75 Medium Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"ILH-KK Citadel-class Civilian Cruiser"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Kom'rk-class Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Loronar Medium Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Mobquet Medium Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Seltiss-1 Caravel"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Shaadlar-type Troopship"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"VT-49 Decimator"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Wayfarer-class Medium Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"YZ-775 Medium Transport"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Lambda-class T-4a Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Aegis-class Combat Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Delta-class JV-7 Escort Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Flarestar-class Attack Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Nu-class Attack Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Sentinel-class Landing Craft"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Upsilon-class Command Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Sheathipede-class Transport Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Sigma-class Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Low Altitude Assault Transport"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"BR-23 Courier"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Y-4 Raptor-class Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"CR25 Troop Carrier"));
+        ship.get(11).add(ShipFactory.makeShip(ShipType.FREIGHTER,"YV-865 Aurore-class Freighter"));
+        ship.get(5).add(ShipFactory.makeShip(ShipType.FRIGATE,"Pelta-class Frigate"));
+        ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Consular-class Cruiser"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Delta-class T-3c Shuttle"));
 
         long creditLimit = setup.getCreditLimit();
         int roundLimit = setup.getRoundLimit();
@@ -368,6 +430,10 @@ public class CombatSim{
         int counter = 0;
         long startTime = System.currentTimeMillis();
         do{
+            int g1 = fleet1.groundCombat();
+            int g2 = fleet2.groundCombat();
+            fleet1.groundDead(g2);
+            fleet2.groundDead(g1);
             counter++;
             fleet1.combat(fleet2.getFleet().get(0), counter);
             fleet2.combat(fleet1.getFleet().get(0), counter);
@@ -375,7 +441,7 @@ public class CombatSim{
             fleet2.repair();
             fleet1.collectFleetStats();
             fleet2.collectFleetStats();
-            reports.newReport(counter,fleet1.getholdCount(),fleet1.getShipType(),fleet1.getDamageCount(),fleet1.getMessages(),fleet2.getholdCount(),fleet2.getShipType(),fleet2.getDamageCount(),fleet2.getMessages());
+            reports.newReport(counter,fleet1.getTotalTroops(),fleet2.getTotalTroops(),fleet1.getholdCount(),fleet1.getShipType(),fleet1.getDamageCount(),fleet1.getMessages(),fleet2.getholdCount(),fleet2.getShipType(),fleet2.getDamageCount(),fleet2.getMessages());
         }while(!fleet1.getFleet().get(0).isEmpty() && !fleet2.getFleet().get(0).isEmpty() && counter < roundLimit);
         //Declare Winner          
         long endTime   = System.currentTimeMillis();

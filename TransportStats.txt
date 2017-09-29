@@ -1,0 +1,18 @@
+Republic Assault Ship,15040,7520,0,70,80,16000
+Beta-class ETR-3 Escort Transport,900,450,0,60,0,40
+Delta-class DX-9 Stormtrooper Transport,400,200,0,25,0,30
+Etti Lighter,2500,1250,0,60,0,15
+Gamma-class ATR-6 Assault Transport,900,450,0,60,0,40
+GR-75 Medium Transport,1800,900,0,60,0,90
+ILH-KK Citadel-class Civilian Cruiser,720,360,2,40,0,14
+Kom'rk-class Transport,1362,681,0,60,0,24
+Loronar Medium Transport,1500,750,0,60,0,10
+Mobquet Medium Transport,2260,1130,0,60,0,32
+Seltiss-1 Caravel,600,300,0,35,0,65
+Shaadlar-type Troopship,2600,1300,0,60,0,800
+VT-49 Decimator,760,380,0,40,0,6
+Wayfarer-class Medium Transport,1640,820,2,60,0,6
+YZ-775 Medium Transport,1040,520,0,60,0,14
+UT-60D U-wing Starfighter,500,250,0,25,0,8
+Kleeque-class Transport,5000,2500,0,60,0,1000
+CR25 Troop Carrier,1200,600,0,60,4,40

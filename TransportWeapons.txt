@@ -1,0 +1,18 @@
+Republic Assault Ship,4,Proton Torpedo Launcher,12,Quad Turbolaser Turret,24,Laser Cannon
+Beta-class ETR-3 Escort Transport,4,Turbolaser Turret,2,Laser Cannon,2,Ion Cannon,2,Proton Torpedo Launcher
+Delta-class DX-9 Stormtrooper Transport,8,Laser Cannon,4,Ion Cannon,2,Proton Torpedo Launcher
+Etti Lighter,10,Quad Laser Cannon
+Gamma-class ATR-6 Assault Transport,4,Turbolaser,2,Ion Cannon,2,Proton Torpedo Launcher
+GR-75 Medium Transport,4,Dual Laser Cannon
+ILH-KK Citadel-class Civilian Cruiser,4,Dual Laser Cannon,4,Ion Cannon,1,Missile Launcher
+Kom'rk-class Transport,4,Laser Cannon
+Loronar Medium Transport,4,Dual Laser Cannon
+Mobquet Medium Transport,2,Dual Laser Cannon,1,Missile Launcher
+Seltiss-1 Caravel,4,Turbolaser Turret,1,Missile Launcher
+Shaadlar-type Troopship,2,Medium Turbolaser Battery,2,Medium Point-Defense Ion Cannon,2,Missile Launcher
+VT-49 Decimator,2,Quad Laser Cannon,2,Missile Launcher
+Wayfarer-class Medium Transport,1,Quad Laser Cannon,1,Laser Cannon
+YZ-775 Medium Transport,2,Turbolaser Cannon,2,Dual Laser Cannon,2,Proton Torpedo Launcher
+UT-60D U-wing Starfighter,2,Laser Cannon
+Kleeque-class Transport,2,Laser Cannon
+CR25 Troop Carrier,2,Dual Turbolaser Cannon

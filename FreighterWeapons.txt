@@ -6,13 +6,5 @@ YT-1250 Freighter,2,Dual Laser Cannon
 Stathas-class Freighter,1,Quad Laser Cannon,1,Proton Torpedo Launcher
 MC-18 Light Freighter,1,Laser Cannon
 Simiyiar-class Light Freighter,1,Dual Laser Cannon,1,Ion Cannon
-SS-54 Assault Ship,1,Dual Laser Cannon,4,Laser Cannon
 Stalwart-class Freighter,1,Laser Cannon
-RX4 Patrol Ship,2,Dual Turbolaser,1,Ion Cannon
-Mynock-class Assault Boat,1,Quad Laser Cannon,2,Medium Ion Cannon,1,Missile Launcher
-Firespray-31-class Attack Craft,2,Laser Cannon,2,Missile Launcher
-Pursuer-class Enforcement Ship,1,Dual Laser Cannon,1,Ion Cannon,1,Proton Torpedo Launcher
-UT-60D U-wing Starfighter,2,Laser Cannon
-PB-950 Patrol Boat,1,Quad Laser Cannon,2,Medium Ion Cannon,1,Missile Launcher
-Law-class Light Patrol Craft,4,Laser Cannon,1,Proton Torpedo Launcher
-Fw'sen-class Picket Ship,2,Turbolaser,6,Ion Cannon,2,Laser Cannon
+YV-865 Aurore-class Freighter,2,Dual Medium Laser Cannon

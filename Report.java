@@ -16,8 +16,10 @@ public class Report
     private ArrayList<int[]> f2Count;
     private ArrayList<Message> f2Report;
     private int round;
+    private int[] f1Troops;
+    private int[] f2Troops;
 
-    public Report(int round,int f1holdCount,String[] f1Ships, ArrayList<int[]> f1Count, ArrayList<Message> f1Report,int f2holdCount, String[] f2Ships, ArrayList<int[]> f2Count, ArrayList<Message> f2Report){
+    public Report(int round,int[] f1Troops, int[] f2Troops, int f1holdCount,String[] f1Ships, ArrayList<int[]> f1Count, ArrayList<Message> f1Report,int f2holdCount, String[] f2Ships, ArrayList<int[]> f2Count, ArrayList<Message> f2Report){
         this.round = round;
         this.f1Ships = f1Ships;
         this.f1Count = f1Count;
@@ -27,6 +29,8 @@ public class Report
         this.f2Report = f2Report;
         this.f1holdCount = f1holdCount;
         this.f2holdCount = f2holdCount;
+        this.f1Troops = f1Troops;
+        this.f2Troops = f2Troops;
     }
 
     public int getf1holdCount(){
@@ -63,5 +67,13 @@ public class Report
 
     public int getround(){
         return round;
+    }
+
+    public int[] getf1Troops(){
+        return f1Troops;
+    }
+
+    public int[] getf2Troops(){
+        return f2Troops;
     }
 }

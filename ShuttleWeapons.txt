@@ -1,0 +1,13 @@
+Lambda-class T-4a Shuttle,5,Dual Laser Cannon
+Aegis-class Combat Shuttle,2,Laser Cannon,2,Missile Launcher
+Delta-class JV-7 Escort Shuttle,3,Laser Cannon,1,Dual Turbolaser,2,Missile Launcher
+Flarestar-class Attack Shuttle,2,Laser Cannon,2,Proton Torpedo Launcher
+Nu-class Attack Shuttle,4,Medium Laser Cannon,2,Dual Light Laser Cannon
+Sentinel-class Landing Craft,8,Laser Cannon,2,Missile Launcher,1,Ion Cannon
+Upsilon-class Command Shuttle,2,Dual Heavy Laser Cannon
+Sheathipede-class Transport Shuttle,3,Laser Cannon
+Sigma-class Shuttle,1,Turbolaser Turret,1,Heavy Laser Cannon
+Low Altitude Assault Transport,5,Laser Cannon,2,Missile Launcher
+BR-23 Courier,2,Laser Cannon
+Y-4 Raptor-class Transport,2,Dual Laser Cannon,1,Missile Launcher
+Delta-class T-3c Shuttle,2,Dual Laser Cannon,3,Laser Cannon

@@ -1,7 +1,7 @@
-Emperor-class Star Dreadnought,1000000,500000,720,100
-Imperial Dreadnought Cruiser,400000,200000,1080,98
-Executor-class Star Dreadnought,380000,190000,144,98
-Eclipse-class Star Dreadnought,350000,175000,696,98
-Viscount-class Star Defender,340000,170000,216,98
-Sovereign-class Super Star Destroyer,300000,150000,360,98
-Super Star Destroyer,241600,120800,144,98
+Emperor-class Star Dreadnought,1000000,500000,720,100,400,100000
+Imperial Dreadnought Cruiser,400000,200000,1080,98,200,30000
+Executor-class Star Dreadnought,380000,190000,144,98,200,38000
+Eclipse-class Star Dreadnought,350000,175000,696,98,100,150000
+Viscount-class Star Defender,340000,170000,216,98,108,12500
+Sovereign-class Super Star Destroyer,300000,150000,360,98,100,130,100
+Super Star Destroyer,241600,120800,144,98,200,38000

@@ -1,12 +1,12 @@
-Bes'uliik,300,150,20
-X-Wing,250,125,15
-B-Wing,338,169,20
-ARC-170,290,145,15
-TIE Defender,184,92,10
-Reborn Sith Heavy Fighter,290,145,15
-Aleph-class Starfighter,360,180,20
-CloakShape Fighter,300,0,20
-R-41 Starchaser,326,163,20
-StarViper-class Attack Platform,180,90,15
-Rihkxyrk Assault Fighter,360,180,20
-Ixiyen-class Fast Attack Craft,400,200,20
+Bes'uliik,300,150,20,0
+X-Wing,250,125,15,0
+B-Wing,338,169,20,0
+ARC-170,290,145,15,0
+TIE Defender,184,92,10,0
+Reborn Sith Heavy Fighter,290,145,15,0
+Aleph-class Starfighter,360,180,20,0
+CloakShape Fighter,300,0,20,0
+R-41 Starchaser,326,163,20,0
+StarViper-class Attack Platform,180,90,15,0
+Rihkxyrk Assault Fighter,360,180,20,0
+Ixiyen-class Fast Attack Craft,400,200,20,0

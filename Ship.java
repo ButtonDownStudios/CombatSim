@@ -16,10 +16,12 @@ public abstract class Ship{
     private Ship target;
     private Ship targetedBy;
     private int maneuverability;
+    private int maxTroops;
+    private int currentTroops;
     private int price;
     private HashMap<Integer, ArrayList<String>> priority;
 
-    public Ship(String shipClass, int hull, int shields, int maneuverability, String[] newWeapons){
+    public Ship(String shipClass, int hull, int shields, int maneuverability, int maxTroops, String[] newWeapons){
         this.shipClass = shipClass;
         this.hull = hull;
         this.shields = shields;
@@ -30,6 +32,12 @@ public abstract class Ship{
         hasTarget = false;
         isTarget = false;
         this.maneuverability = maneuverability;
+        this.maxTroops = maxTroops;
+        if(this instanceof CapitalShip){
+            currentTroops = maxTroops;
+        }else{
+            currentTroops = 0;
+        }
         addWeapons(newWeapons);
     }
 
@@ -220,6 +228,10 @@ public abstract class Ship{
         return -1;
     }
 
+    public int getShuttles(){
+        return -1;
+    }
+
     public boolean getIsTarget(){
         return isTarget;
     }
@@ -248,6 +260,18 @@ public abstract class Ship{
         return target;
     }
 
+    public int getMaxTroops(){
+        return maxTroops;
+    }
+
+    public int getCurrentTroops(){
+        return currentTroops;
+    }
+
+    public void setTroops(int t){
+        currentTroops = t;
+    }
+
     public void repair(){
         if(damagedShields < shields){
             if(shields - damagedShields <= (shields) / 20){
@@ -264,11 +288,67 @@ public abstract class Ship{
             }  
         }
     }
-    
+
     public void disabledWeapons(){
         for(Weapon w : weapons){
             if(Randomizer.getRgen(101) <= 5){
                 w.setDisabled(true);
+            }
+        }
+    }
+
+    public boolean canLand(int counter){
+        if(type == ShipType.SHUTTLE && currentTroops > 0 && counter % 16 == 0){
+            return true;
+        }else if(type == ShipType.FREIGHTER && currentTroops == maxTroops && counter % 8 == 0 && Randomizer.getRgen(10) < 4){
+            return true;
+        }else if(this instanceof CapitalShip && type == ShipType.TRANSPORT && currentTroops == maxTroops &&((CapitalShip) this).getShuttles() == 0 && counter % 10 == 0 && Randomizer.getRgen(10) < 7){
+            return true;
+        }else if(type == ShipType.PATROL && currentTroops == maxTroops && counter % 7 == 0 && Randomizer.getRgen(10) < 5){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public int landTroops(int counter){
+        if(canLand(counter)){
+            int landing = currentTroops;
+            currentTroops = 0;
+            return landing;
+        }else{
+            return 0;
+        }
+    }
+
+    public Ship canTake(int counter,ArrayList<Ship> f){
+        if(type == ShipType.SHUTTLE && counter % 16 == 8 && currentTroops == 0){
+            int take;
+            for(int i = 0; i < 20; i++){
+                take = Randomizer.getRgen(f.size());
+                Ship s = f.get(take);
+                if(!(s instanceof StarFighter) && s.getType() != ShipType.FREIGHTER && s.getType() != ShipType.PATROL && s.getCurrentTroops() > 0){
+                    if(s.getType() == ShipType.TRANSPORT && s instanceof CapitalShip && ((CapitalShip) s).getShuttles() == 0){
+                        continue;
+                    }else{
+                        return s;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    public void takeTroops(int counter,ArrayList<Ship> f){
+        Ship take = canTake(counter,f);
+        if(take != null){
+            int available = take.getCurrentTroops();
+            if(available >= maxTroops){
+                take.setTroops(available - maxTroops);
+                currentTroops = maxTroops;
+            }else{
+                take.setTroops(0);
+                currentTroops = available;
             }
         }
     }

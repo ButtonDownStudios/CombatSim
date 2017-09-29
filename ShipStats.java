@@ -62,16 +62,18 @@ public class ShipStats{
         JPanel left = new JPanel();
 
         if(s instanceof CapitalShip){
-            left.setLayout(new GridLayout(4,1));
+            left.setLayout(new GridLayout(6,1));
         }else{
-            left.setLayout(new GridLayout(3,1));
+            left.setLayout(new GridLayout(4,1));
         }
 
         left.add(new JLabel("Hull Strength: " + s.getHull()));
         left.add(new JLabel("Shield Strength: " + s.getShields()));
         if(s instanceof CapitalShip){
             left.add(new JLabel("Hangar: " + s.getHangar()));
+            left.add(new JLabel("Shuttles: " + s.getShuttles()));
         }
+        left.add(new JLabel("Troop Capacity " + s.getMaxTroops()));
         left.add(new JLabel("Price: " + s.getPrice()));
 
         content.add(left);
@@ -114,6 +116,10 @@ public class ShipStats{
         count.replace(s.getShipClass(), i, j);
         if(s instanceof CapitalShip){
             FleetCreation.setFighters(0, s.getHangar(), i, j);
+            FleetCreation.setShuttles(0, s.getShuttles(), i, j);
+            FleetCreation.setTroops(0, s.getMaxTroops(), i, j);
+        }else if(s.getType() == ShipType.SHUTTLE){
+            FleetCreation.setShuttles(1, 0, i, j);
         }else{
             FleetCreation.setFighters(1, 0, i, j);
         }
@@ -130,6 +136,10 @@ public class ShipStats{
         count.replace(s.getShipClass(), i, j);
         if(s instanceof CapitalShip){
             FleetCreation.setFighters(0, s.getHangar(), i, j);
+            FleetCreation.setShuttles(0, s.getShuttles(), i, j);
+            FleetCreation.setTroops(0, s.getMaxTroops(), i, j);
+        }else if(s.getType() == ShipType.SHUTTLE){
+            FleetCreation.setShuttles(1, 0, i, j);
         }else{
             FleetCreation.setFighters(1, 0, i, j);
         }
@@ -147,6 +157,10 @@ public class ShipStats{
         }
         if(s instanceof CapitalShip){
             FleetCreation.setFighters(0, s.getHangar(), i, j);
+            FleetCreation.setFighters(0, s.getHangar(), i, j);
+            FleetCreation.setTroops(0, s.getMaxTroops(), i, j);
+        }else if(s.getType() == ShipType.SHUTTLE){
+            FleetCreation.setShuttles(1, 0, i, j);
         }else{
             FleetCreation.setFighters(1, 0, i, j);
         }

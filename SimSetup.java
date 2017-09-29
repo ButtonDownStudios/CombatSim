@@ -61,10 +61,10 @@ public class SimSetup{
                     creditLimit = 500000000;
                 }else if(choice.equals("Small")){
                     roundLimit = 1000;
-                    creditLimit = 50000000;
+                    creditLimit = 40000000;
                 }else if(choice.equals("Skirmish")){
                     roundLimit = 500;
-                    creditLimit = 20000000;
+                    creditLimit = 8000000;
                 } 
                 creditSpeak.changeData(creditLimit);
                 roundSpeak.changeData(roundLimit);

@@ -1,19 +1,21 @@
-Hammerhead-class Heavy Cruiser,10000,5000,12,65
-Gladiator-class Star Destroyer,10000,5000,24,65
-Alliance Assault Frigate,9000,4500,60,65
-Galactic Defense Frigate,8000,4000,48,65
-Ardent-class Frigate,8000,4000,12,65
-Sacheen-class Light Escort,7500,3750,12,65
-Republic Battle Frigate,7500,3750,24,65
-Imperial Battle Frigate,7500,3750,48,65
-Dogan Support Frigate,7000,3500,12,65
-Kaloth-class Battle Cruiser,6140,3070,12,65
-Class 1000 Cruiser,6000,3000,12,65
-Star Galleon-class Frigate,6000,3000,0,65
-Nebulon-B Frigate,6000,3000,12,65
-Corona-class Frigate,5500,2750,36,65
-Nebulon-B2 Frigate,5060,2530,0,65
-Lancer-class Frigate,5000,2500,0,60
-Arquitens-class Light Cruiser,5000,2500,0,60
-Armadia-class Thrustship,4800,2400,40,60
-Bayonet-class Light Cruiser,4000,2000,0,60
+Hammerhead-class Heavy Cruiser,6300,3150,12,65,2,400
+Gladiator-class Star Destroyer,10000,5000,24,65,8,1200
+Alliance Assault Frigate,9000,4500,60,65,3,100
+Galactic Defense Frigate,8000,4000,48,65,2,100
+Ardent-class Frigate,8000,4000,12,65,1,200
+Sacheen-class Light Escort,7500,3750,12,65,0,6
+Republic Battle Frigate,7500,3750,24,65,2,200
+Imperial Battle Frigate,7500,3750,48,65,1,50
+Dogan Support Frigate,7000,3500,12,65,4,200
+Kaloth-class Battle Cruiser,6140,3070,12,65,0,75
+Class 1000 Cruiser,6000,3000,12,65,0,200
+Star Galleon-class Frigate,6000,3000,0,65,0,300
+Nebulon-B Frigate,6000,3000,24,65,4,75
+Corona-class Frigate,5500,2750,36,65,6,200
+Nebulon-B2 Frigate,5060,2530,0,65,0,150
+Lancer-class Frigate,5000,2500,0,60,2,40
+Arquitens-class Light Cruiser,5000,2500,0,60,0,10
+Armadia-class Thrustship,4800,2400,40,60,0,1600
+Bayonet-class Light Cruiser,4000,2000,0,60,1,48
+Tartan-class Patrol Cruiser,5000,2500,0,60,0,50
+Pelta-class Frigate,5644,2822,0,65,0,300

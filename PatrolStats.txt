@@ -1,0 +1,8 @@
+SS-54 Assault Ship,484,242,0,25,0,0
+RX4 Patrol Ship,660,330,0,35,0,6
+Mynock-class Assault Boat,880,440,0,40,0,24
+Firespray-31-class Attack Craft,430,215,0,25,0,6
+Pursuer-class Enforcement Ship,602,301,0,35,0,7
+PB-950 Patrol Boat,740,370,0,40,0,8
+Law-class Light Patrol Craft,1020,510,0,60,0,10
+Fw'sen-class Picket Ship,900,450,0,60,0,0

@@ -1,5 +1,3 @@
-Republic Assault Ship,4,Proton Torpedo Launcher,12,Quad Turbolaser Turret,24,Laser Cannon
-Tartan-class Patrol Cruiser,20,Laser Cannon
 Enforcer-class Patrol Cruiser,10,Turbolaser Battery,6,Ion Cannon,10,Quad Laser Cannon
 Immobilizer 418 Cruiser,20,Quad Laser Cannon
 Interdictor-class Cruiser,4,Turbolaser Battery,2,Ion Cannon,20,Quad Laser Cannon

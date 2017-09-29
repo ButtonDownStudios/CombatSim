@@ -1,10 +1,10 @@
-Trade Federation Battleship,96000,48000,1500,90
-Reborn Sith Battle Carrier,80000,40000,360,90
-Revenge-class Heavy Carrier,80000,40000,720,90
-Festrian Super Carrier,64000,32000,720,90
-Secutor-class Star Destroyer,44000,22000,144,85
-Venator-class Star Destroyer,22740,11370,420,75
-Endurance-class Fleet Carrier,21600,10400,144,75
-Defender-class Assault Carrier,14000,7000,36,70
-Escort Carrier,10000,5000,60,65
-Quasar Fire-class Bulk Cruiser,6800,3400,48,65
+Trade Federation Battleship,96000,48000,1500,90,50,100000
+Reborn Sith Battle Carrier,80000,40000,360,90,50,6000
+Revenge-class Heavy Carrier,80000,40000,720,90,100,19400
+Festrian Super Carrier,64000,32000,720,90,60,6000
+Secutor-class Star Destroyer,44000,22000,144,85,40,14000
+Venator-class Star Destroyer,22740,11370,420,75,40,2000
+Endurance-class Fleet Carrier,21600,10400,144,75,12,1600
+Defender-class Assault Carrier,14000,7000,72,70,6,700
+Escort Carrier,10000,5000,60,65,6,800
+Quasar Fire-class Bulk Cruiser,6800,3400,48,65,0,0

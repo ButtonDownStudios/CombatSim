@@ -1,8 +1,8 @@
-A-Wing,192,96,10
-UG Interceptor,280,140,15
-TIE Interceptor,196,0,10
-Reborn Sith Interceptor,244,122,15
-Eta-2 Actis-class Interceptor,109,0,15
-Alpha-3 Nimbus-class V-wing Starfighter,158,79,10
-Delta-7 Aethersprite-class Light Interceptor,160,80,10
-A-9 Vigilance Interceptor,148,0,10
+A-Wing,192,96,100,0
+UG Interceptor,280,140,15,0
+TIE Interceptor,196,0,10,0
+Reborn Sith Interceptor,244,122,15,0
+Eta-2 Actis-class Interceptor,109,0,15,0
+Alpha-3 Nimbus-class V-wing Starfighter,158,79,10,0
+Delta-7 Aethersprite-class Light Interceptor,160,80,10,0
+A-9 Vigilance Interceptor,148,0,10,0

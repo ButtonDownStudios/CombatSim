@@ -13,6 +13,9 @@ public class Fleet{
     private int holdCount;
     private static long creditLimit;
     private ArrayList<Message> messages;
+    private int spaceTroops;
+    private int groundTroops;
+    private int deadTroops;
 
     public Fleet(long credits, ArrayList<Ship> shipTypeExample){
         fleet = new ArrayList<ArrayList<Ship>>();
@@ -20,7 +23,8 @@ public class Fleet{
         this.shipTypeExample = shipTypeExample;
         holdCount = 0;
         creditLimit = credits;
-
+        groundTroops = 0;
+        deadTroops = 0;
         for(int i = 0; i <= 5; i++){
             fleet.add(new ArrayList<Ship>());
         }
@@ -81,16 +85,18 @@ public class Fleet{
                             if(s.getDamagedHull() < (s.getHull() / 10)){
                                 if(s.getDamagedHull() <= 0){
                                     fleet.get(4).add(s);
-                                    messages.add(new Message(4,s,s.getTargetedBy()));
+                                    messages.add(new Message(4,s,s.getTargetedBy(),s.getCurrentTroops()));
                                     s.getTargetedBy().setHasTarget(false);
                                     s.setIsTarget(false);
                                     it1.remove();
+                                    deadTroops += s.getCurrentTroops();
+                                    spaceTroops -= s.getCurrentTroops();
                                     continue;
                                 }else{                                          
                                     int retreat = 1+Randomizer.getRgen(100);
                                     if(retreat > 10){
                                         fleet.get(3).add(s);
-                                        messages.add(new Message(3,s,s.getTargetedBy()));
+                                        messages.add(new Message(3,s,s.getTargetedBy(),0));
                                         s.getTargetedBy().setHasTarget(false);
                                         s.setIsTarget(false);
                                         it1.remove();
@@ -101,7 +107,7 @@ public class Fleet{
                                 int retreat = 1+Randomizer.getRgen(100);
                                 if( retreat > 25){
                                     fleet.get(2).add(s);
-                                    messages.add(new Message(2,s,s.getTargetedBy()));
+                                    messages.add(new Message(2,s,s.getTargetedBy(),0));
                                     s.getTargetedBy().setHasTarget(false);
                                     s.setIsTarget(false);
                                     it1.remove();
@@ -112,7 +118,7 @@ public class Fleet{
                             int retreat = 1+Randomizer.getRgen(100);
                             if( retreat > 50){
                                 fleet.get(1).add(s);
-                                messages.add(new Message(1,s,s.getTargetedBy()));
+                                messages.add(new Message(1,s,s.getTargetedBy(),0));
                                 s.getTargetedBy().setHasTarget(false);
                                 s.setIsTarget(false);
                                 it1.remove();
@@ -130,6 +136,10 @@ public class Fleet{
             }
             s.fire(counter);
             s.retaliate();
+            s.takeTroops(counter,fleet.get(0));
+            int land = s.landTroops(counter);
+            groundTroops += land;
+            spaceTroops -= land;
         } 
     }
 
@@ -141,13 +151,13 @@ public class Fleet{
                 s.repair();
                 if(s.getDamagedHull() == s.getHull()){
                     fleet.get(0).add(s);
-                    messages.add(new Message(5,s,null));
+                    messages.add(new Message(5,s,null,0));
                     it1.remove();
                 }else if(s.getDamagedHull() >= s.getHull() * .75){
                     int random = Randomizer.getRgen(101);
                     if(random >= 50){
                         fleet.get(0).add(s);
-                        messages.add(new Message(5,s,null));
+                        messages.add(new Message(5,s,null,0));
                         it1.remove();
                     }
                 }
@@ -166,20 +176,65 @@ public class Fleet{
     public ArrayList<ArrayList<Ship>> getFleet(){
         return fleet;
     }
-    
+
     public String[] getShipType(){
         return shipType;
     }
-    
+
     public ArrayList<int[]> getDamageCount(){
         return damageCount;
     }
-    
+
     public ArrayList<Message> getMessages(){
         return messages;
     }
-    
+
     public int getholdCount(){
         return holdCount;
+    }
+
+    public int getSpaceTroops(){
+        return spaceTroops;
+    }
+
+    public int getGroundTroops(){
+        return groundTroops;
+    }
+
+    public void setSpaceTroops(int t){
+        spaceTroops = t;
+    }
+
+    public int getDeadTroops(){
+        return deadTroops;
+    }
+
+    public int[] getTotalTroops(){
+        int[] total = new int[3];
+        total[0] = spaceTroops;
+        total[1] = groundTroops;
+        total[2] = deadTroops;
+        return total;
+    }
+
+    public int groundCombat(){
+        int dead = 0;
+        for(int i = 0; i < groundTroops; i++){
+            if(Randomizer.getRgen(101) < 10){
+                dead++;
+            }
+        }
+        return dead;
+    }
+
+    public void groundDead(int dead){
+        int temp = groundTroops - dead;
+        if(temp < 0){
+            deadTroops += groundTroops;
+            groundTroops = 0;
+        }else{
+            groundTroops = temp;
+            deadTroops += dead;
+        }
     }
 }

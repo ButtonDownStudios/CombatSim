@@ -1,18 +1,18 @@
-E-Wing,224,112,15
-UG Fighter,240,120,15
-TIE Fighter,178,0,10
-TIE Raptor,136,0,10
-TIE Phantom,96,48,10
-Reborn Sith Light Fighter,236,118,15
-Belbullab-22 Starfighter,134,67,10
-Droid Tri-Fighter,108,0,10
-Z-95 Headhunter,236,118,15
-N-1 Starfighter,220,110,15
-Vulture-class Droid Starfighter,70,0,5
-Miy'til Starfighter,150,75,10
-Nssis-class Clawcraft,163,77,10
-Fang Fighter,160,0,10
-Aurek-class Tactical Strikefighter,184,92,10
-Rogue-class Starfighter,254,127,15
-V-19 Torrent Starfighter,120,0,10
-I-7 Howlrunner,228,114,15
+E-Wing,224,112,15,0
+UG Fighter,240,120,15,0
+TIE Fighter,178,0,10,0
+TIE Raptor,136,0,10,0
+TIE Phantom,96,48,10,0
+Reborn Sith Light Fighter,236,118,15,0
+Belbullab-22 Starfighter,134,67,10,0
+Droid Tri-Fighter,108,0,10,0
+Z-95 Headhunter,236,118,15,0
+N-1 Starfighter,220,110,15,0
+Vulture-class Droid Starfighter,70,0,5,0
+Miy'til Starfighter,150,75,10,0
+Nssis-class Clawcraft,163,77,10,0
+Fang Fighter,160,0,10,0
+Aurek-class Tactical Strikefighter,184,92,10,0
+Rogue-class Starfighter,254,127,15,0
+V-19 Torrent Starfighter,120,0,10,0
+I-7 Howlrunner,228,114,15,0

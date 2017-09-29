@@ -1,4 +1,4 @@
-Hammerhead-class Heavy Cruiser,4,Dual Turbolaser,6,Laser Cannon
+Hammerhead-class Heavy Cruiser,4,Dual Light Turbolaser Cannon,2,Medium Turbolaser Cannon,2,Quad Laser Cannon,2,Point-Defense Laser Cannon
 Gladiator-class Star Destroyer,2,Missile Launcher,5,Light Turbolaser Battery,2,Point-Defense Laser Cannon
 Alliance Assault Frigate,20,Turbolaser Battery,8,Ion Cannon
 Galactic Defense Frigate,18,Turbolaser Battery,6,Laser Cannon
@@ -17,3 +17,5 @@ Lancer-class Frigate,20,Quad Laser Cannon
 Arquitens-class Light Cruiser,2,Missile Launcher,4,Dual Turbolaser Cannon,4,Quad Laser Cannon
 Armadia-class Thrustship,4,Missile Launcher,8,Turbolaser Battery,6,Ion Cannon
 Bayonet-class Light Cruiser,8,Heavy Turbolaser,6,Laser Cannon
+Tartan-class Patrol Cruiser,8,Laser Cannon
+Pelta-class Frigate,2,Light Turbolaser Battery,3,Light Point-Defense Laser Cannon

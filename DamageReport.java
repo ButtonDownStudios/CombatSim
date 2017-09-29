@@ -21,8 +21,10 @@ public class DamageReport{
     private Container contentPane;
     private JTextField input;
     private ReportHolder report;
+    private int[] f1Troops;
+    private int[] f2Troops;
 
-    public DamageReport(ReportHolder report,int round,int f1holdCount,String[] f1Ships, ArrayList<int[]> f1Count, ArrayList<Message> f1Report,int f2holdCount, String[] f2Ships, ArrayList<int[]> f2Count, ArrayList<Message> f2Report){
+    public DamageReport(ReportHolder report,int round,int[] f1Troops, int[] f2Troops, int f1holdCount,String[] f1Ships, ArrayList<int[]> f1Count, ArrayList<Message> f1Report,int f2holdCount, String[] f2Ships, ArrayList<int[]> f2Count, ArrayList<Message> f2Report){
         this.report = report;
         this.round = round;
         this.f1Ships = f1Ships;
@@ -33,6 +35,8 @@ public class DamageReport{
         this.f2Report = f2Report;
         this.f1holdCount = f1holdCount;
         this.f2holdCount = f2holdCount;
+        this.f1Troops = f1Troops;
+        this.f2Troops = f2Troops;
         makeFrame();
     }
 
@@ -118,6 +122,20 @@ public class DamageReport{
         fleet1.add(f1Stats,BorderLayout.CENTER);
         fleet2.add(f2Stats,BorderLayout.CENTER);
 
+        JPanel troops1 = new JPanel();
+        troops1.setLayout(new GridLayout(1,3));
+        troops1.add(new JLabel("Troops In Space: " + Integer.toString(f1Troops[0])));
+        troops1.add(new JLabel("Troops On Ground: " + Integer.toString(f1Troops[1])));
+        troops1.add(new JLabel("Troops Killed: " + Integer.toString(f1Troops[2])));
+        fleet1.add(troops1,BorderLayout.SOUTH);
+
+        JPanel troops2 = new JPanel();
+        troops2.setLayout(new GridLayout(1,3));
+        troops2.add(new JLabel("Troops In Space: " + Integer.toString(f2Troops[0])));
+        troops2.add(new JLabel("Troops On Ground: " + Integer.toString(f2Troops[1])));
+        troops2.add(new JLabel("Troops Killed: " + Integer.toString(f2Troops[2])));
+        fleet2.add(troops2,BorderLayout.SOUTH);
+
         fleetReport.add(fleet1);
         fleetReport.add(fleet2);
 
@@ -154,6 +172,9 @@ public class DamageReport{
                 s = " was critically damaged by " + m.getAttacker().getShipClass();
             }else if(m.getCode() == 4){
                 s = " was destroyed by " + m.getAttacker().getShipClass();
+                if(m.getTroops() > 0){
+                    s += "\t" + m.getTroops() + " troops have perished in space";
+                }
             }else{
                 s = " rejoins the battle";
             }

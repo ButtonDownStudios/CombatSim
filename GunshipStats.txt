@@ -1,12 +1,13 @@
-Reborn Sith Gunship,4000,2000,0,60
-Federation Assault Gunship,4000,2000,0,60
-Marauder Corvette,3900,1950,12,60
-Warrior-class Gunship,3800,1900,0,60
-Agave-class Picket Ship,3800,1900,0,60
-Shunan Gunship,3500,1750,0,60
-Corellian Corvette,3000,1500,0,60
-Imperial Assault Gunship,3000,1500,0,60
-Assassin-class Corvette,2780,1390,0,60
-Corellian Gunship,2400,1200,0,60
-Old Republic Light Cruiser,2040,1020,0,60
-Braha'tok-class Gunship,1800,900,0,60
+Reborn Sith Gunship,4000,2000,0,60,1,60
+Federation Assault Gunship,4000,2000,0,60,1,80
+Marauder Corvette,3900,1950,12,60,6,80
+Warrior-class Gunship,3800,1900,0,60,0,10
+Agave-class Picket Ship,3800,1900,0,60,0,5
+Shunan Gunship,3500,1750,0,60,1,80
+Corellian Corvette,3000,1500,0,60,1,600
+Imperial Assault Gunship,3000,1500,0,60,1,40
+Assassin-class Corvette,2780,1390,0,60,0,60
+Corellian Gunship,2400,1200,0,60,0,0
+Old Republic Light Cruiser,2040,1020,0,60,0,0
+Braha'tok-class Gunship,1800,900,0,60,0,0
+Consular-class Cruiser,2772,1386,0,60,0,30
