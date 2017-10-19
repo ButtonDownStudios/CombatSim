@@ -10,3 +10,4 @@ R-41 Starchaser,2,Light Laser Cannon,2,Light Ion Cannon,2,Missile Launcher
 StarViper-class Attack Platform,2,Dual Heavy Laser Cannon,2,Proton Torpedo Launcher
 Rihkxyrk Assault Fighter,2,Triple Heavy Laser Cannon,2,Missile Launcher
 Ixiyen-class Fast Attack Craft,2,Dual Medium Laser Cannon,2,Missile Launcher
+TIE Avenger,4,Laser Cannon,2,Missile Launcher

@@ -1,8 +1,5 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.Iterator;
-import java.util.Random;
 
 public class Fleet{
     private ArrayList<ArrayList<Ship>> fleet;
@@ -16,9 +13,11 @@ public class Fleet{
     private int spaceTroops;
     private int groundTroops;
     private int deadTroops;
+    private ArrayList<ArrayList<Troop>> troops;
 
     public Fleet(long credits, ArrayList<Ship> shipTypeExample){
         fleet = new ArrayList<ArrayList<Ship>>();
+        troops = new ArrayList<ArrayList<Troop>>();
         shipTypeHolder = new ArrayList<Ship>();
         this.shipTypeExample = shipTypeExample;
         holdCount = 0;
@@ -27,6 +26,9 @@ public class Fleet{
         deadTroops = 0;
         for(int i = 0; i <= 5; i++){
             fleet.add(new ArrayList<Ship>());
+        }
+        for(int i = 0; i <= 3; i++){
+            troops.add(new ArrayList<Troop>());
         }
     }   
 

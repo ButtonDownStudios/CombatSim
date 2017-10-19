@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
 public class CapitalShip extends Ship{
 
     private int hangar;

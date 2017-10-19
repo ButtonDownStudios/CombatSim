@@ -1,8 +1,9 @@
 Y-Wing,2,Proton Torpedo Launcher,2,Laser Cannon,2,Ion Cannon
-K-Wing,8,Proton Torpedo Launcher,10,Missile Launcher,1,Quad Turbolaser Turret,1,Dual Laser Cannon
+K-Wing,4,Proton Torpedo Launcher,6,Missile Launcher,1,Quad Turbolaser Turret,1,Dual Laser Cannon
 UG Bomber,3,Proton Torpedo Launcher,2,Laser Cannon
 TIE Bomber,2,Proton Torpedo Launcher,2,Missile Launcher,2,Laser Cannon
 Reborn Sith Bomber,2,Heavy Proton Torpedo Launcher,4,Missile Launcher,4,Heavy Laser Cannon
 Hyena-class Bomber,2,Proton Torpedo Launcher,2,Missile Launcher,2,Light Laser Cannon
 Miy'til Assault Bomber,2,Laser Cannon,2,Missile Launcher
 GAT-12 Skipray Blastboat,2,Laser Cannon,1,Dual Laser Cannon,3,Medium Ion Cannon,1,Proton Torpedo Launcher,1,Missile Launcher
+Alpha-class Xg-1 Star Wing,2,Laser Cannon,2,Ion Cannon,2,Missile Launcher

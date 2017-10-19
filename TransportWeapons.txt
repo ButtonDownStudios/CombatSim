@@ -16,3 +16,7 @@ YZ-775 Medium Transport,2,Turbolaser Cannon,2,Dual Laser Cannon,2,Proton Torpedo
 UT-60D U-wing Starfighter,2,Laser Cannon
 Kleeque-class Transport,2,Laser Cannon
 CR25 Troop Carrier,2,Dual Turbolaser Cannon
+Imperial Armored Transport,4,Dual Turbolaser Battery,2,Laser Cannon
+Tra'kad-class Transport,6,Laser Cannon,2,Quad Laser Cannon
+Amphibious Interstellar Assault Transport,2,Dual Laser Cannon,1,Laser Cannon,4,Missile Launcher
+Hardcell-class Interstellar Transport,2,Laser Cannon

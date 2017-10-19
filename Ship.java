@@ -20,6 +20,7 @@ public abstract class Ship{
     private int currentTroops;
     private int price;
     private HashMap<Integer, ArrayList<String>> priority;
+    private ArrayList<Troop> troops;
 
     public Ship(String shipClass, int hull, int shields, int maneuverability, int maxTroops, String[] newWeapons){
         this.shipClass = shipClass;
@@ -39,6 +40,7 @@ public abstract class Ship{
             currentTroops = 0;
         }
         addWeapons(newWeapons);
+        troops = new ArrayList<>();
     }
 
     public void fire(int counter){
@@ -298,13 +300,13 @@ public abstract class Ship{
     }
 
     public boolean canLand(int counter){
-        if(type == ShipType.SHUTTLE && currentTroops > 0 && counter % 16 == 0){
+        if(type == ShipType.SHUTTLE && currentTroops > 0 && counter % 16 >= 0 && counter % 16 < 8){
             return true;
-        }else if(type == ShipType.FREIGHTER && currentTroops == maxTroops && counter % 8 == 0 && Randomizer.getRgen(10) < 4){
+        }else if(type == ShipType.FREIGHTER && currentTroops > 0 && counter >= 8 && Randomizer.getRgen(100) < 8){
             return true;
-        }else if(this instanceof CapitalShip && type == ShipType.TRANSPORT && currentTroops == maxTroops &&((CapitalShip) this).getShuttles() == 0 && counter % 10 == 0 && Randomizer.getRgen(10) < 7){
+        }else if(this instanceof CapitalShip && type == ShipType.TRANSPORT && currentTroops > 0 &&((CapitalShip) this).getShuttles() == 0 && counter >= 10 && Randomizer.getRgen(100) < 14){
             return true;
-        }else if(type == ShipType.PATROL && currentTroops == maxTroops && counter % 7 == 0 && Randomizer.getRgen(10) < 5){
+        }else if(type == ShipType.PATROL && currentTroops > 0 && counter >= 7 && Randomizer.getRgen(100) < 10){
             return true;
         }else{
             return false;

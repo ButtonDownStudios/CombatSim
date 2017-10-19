@@ -1,0 +1,8 @@
+Stormtrooper Armor,35,20,25
+Clone Trooper Armor,30,10,30
+Mandalorian Armor,50,35,20
+Espo Armor,20,0,5
+Tantel Armor,15,0,5
+Venom Assault Armor,35,30,25
+611 Combat Armor,25,0,20
+Protective Vest,5,0,0

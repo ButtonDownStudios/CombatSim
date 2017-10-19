@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
 public class StarFighter extends Ship{
 
     public StarFighter(ShipType shipType, String[] stats, String[] newWeapons){

@@ -1,8 +1,6 @@
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
-import java.awt.event.ActionListener.*;
 
 public class SimSetup{
 
@@ -55,10 +53,10 @@ public class SimSetup{
                     creditLimit = 2000000000;
                 }else if(choice.equals("Large")){
                     roundLimit = 5000;
-                    creditLimit = 1000000000;
+                    creditLimit = 500000000;
                 }else if(choice.equals("Medium")){
                     roundLimit = 2500;
-                    creditLimit = 500000000;
+                    creditLimit = 100000000;
                 }else if(choice.equals("Small")){
                     roundLimit = 1000;
                     creditLimit = 40000000;

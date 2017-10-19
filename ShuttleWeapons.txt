@@ -11,3 +11,6 @@ Low Altitude Assault Transport,5,Laser Cannon,2,Missile Launcher
 BR-23 Courier,2,Laser Cannon
 Y-4 Raptor-class Transport,2,Dual Laser Cannon,1,Missile Launcher
 Delta-class T-3c Shuttle,2,Dual Laser Cannon,3,Laser Cannon
+Kappa-class Shuttle,2,Dual Laser Cannon,2,Laser Cannon
+Grek-class Troop Shuttle,1,Laser Cannon
+Crix-class Assault Shuttle,2,Dual Laser Cannon

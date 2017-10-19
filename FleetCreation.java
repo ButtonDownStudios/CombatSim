@@ -1,8 +1,6 @@
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
-import java.awt.event.ActionListener.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -279,6 +277,15 @@ public class FleetCreation{
         shipCount.get(5).put("Pelta-class Frigate",0);
         shipCount.get(6).put("Consular-class Cruiser",0);
         shipCount.get(14).put("Delta-class T-3c Shuttle",0);
+        shipCount.get(13).put("Imperial Armored Transport",0);
+        shipCount.get(13).put("Tra'kad-class Transport",0);
+        shipCount.get(10).put("Alpha-class Xg-1 Star Wing",0);
+        shipCount.get(7).put("TIE Avenger",0);
+        shipCount.get(13).put("Amphibious Interstellar Assault Transport",0);
+        shipCount.get(14).put("Kappa-class Shuttle",0);
+        shipCount.get(14).put("Grek-class Troop Shuttle",0);
+        shipCount.get(14).put("Crix-class Assault Shuttle",0);
+        shipCount.get(13).put("Hardcell-class Interstellar Transport",0);
 
         for(int i = 0; i < 15; i++){
             shipNames.add(new String[ship.get(i).size()]);
@@ -430,105 +437,105 @@ public class FleetCreation{
         pChoice = new JPanel();
         tChoice = new JPanel();
 
-        dChoice.setLayout(new BorderLayout());;
+        dChoice.setLayout(new BorderLayout());
         cChoice.setLayout(new BorderLayout());
-        bsChoice.setLayout(new BorderLayout());;
-        hcChoice.setLayout(new BorderLayout());;
-        lcChoice.setLayout(new BorderLayout());;
-        fChoice.setLayout(new BorderLayout());;
-        gChoice.setLayout(new BorderLayout());;
-        frChoice.setLayout(new BorderLayout());;
-        pChoice.setLayout(new BorderLayout());;
-        tChoice.setLayout(new BorderLayout());;
+        bsChoice.setLayout(new BorderLayout());
+        hcChoice.setLayout(new BorderLayout());
+        lcChoice.setLayout(new BorderLayout());
+        fChoice.setLayout(new BorderLayout());
+        gChoice.setLayout(new BorderLayout());
+        frChoice.setLayout(new BorderLayout());
+        pChoice.setLayout(new BorderLayout());
+        tChoice.setLayout(new BorderLayout());
 
         JPanel dChoiceDivide = new JPanel();
-        dChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> dChoiceNames = new JComboBox<>(shipNames.get(0));;
+        dChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> dChoiceNames = new JComboBox<>(shipNames.get(0));
         dChoiceNames.addActionListener((event) -> {
-                chooseDreadnoughtType(dChoiceNames.getSelectedIndex());;
+                chooseDreadnoughtType(dChoiceNames.getSelectedIndex());
             });
-        dChoiceDivide.add(new JLabel("Dreadnought Ship Classes:"));;
+        dChoiceDivide.add(new JLabel("Dreadnought Ship Classes:"));
         dChoiceDivide.add(dChoiceNames);
 
         JPanel cChoiceDivide = new JPanel();
-        cChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> cChoiceNames = new JComboBox<>(shipNames.get(1));;
+        cChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> cChoiceNames = new JComboBox<>(shipNames.get(1));
         cChoiceNames.addActionListener((event) -> {
-                chooseCarrierType(cChoiceNames.getSelectedIndex());;
+                chooseCarrierType(cChoiceNames.getSelectedIndex());
             });
-        cChoiceDivide.add(new JLabel("Carrier Ship Classes:"));;
+        cChoiceDivide.add(new JLabel("Carrier Ship Classes:"));
         cChoiceDivide.add(cChoiceNames);
 
         JPanel bsChoiceDivide = new JPanel();
-        bsChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> bsChoiceNames = new JComboBox<>(shipNames.get(2));;
+        bsChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> bsChoiceNames = new JComboBox<>(shipNames.get(2));
         bsChoiceNames.addActionListener((event) -> {
-                chooseBattleshipType(bsChoiceNames.getSelectedIndex());;
+                chooseBattleshipType(bsChoiceNames.getSelectedIndex());
             });
-        bsChoiceDivide.add(new JLabel("Battleship Ship Classes:"));;
+        bsChoiceDivide.add(new JLabel("Battleship Ship Classes:"));
         bsChoiceDivide.add(bsChoiceNames);
 
         JPanel hcChoiceDivide = new JPanel();
-        hcChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> hcChoiceNames = new JComboBox<>(shipNames.get(3));;
+        hcChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> hcChoiceNames = new JComboBox<>(shipNames.get(3));
         hcChoiceNames.addActionListener((event) -> {
-                chooseHeavyCruiserType(hcChoiceNames.getSelectedIndex());;
+                chooseHeavyCruiserType(hcChoiceNames.getSelectedIndex());
             });
-        hcChoiceDivide.add(new JLabel("Heavy Cruiser Ship Classes:"));;
+        hcChoiceDivide.add(new JLabel("Heavy Cruiser Ship Classes:"));
         hcChoiceDivide.add(hcChoiceNames);
 
         JPanel lcChoiceDivide = new JPanel();
-        lcChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> lcChoiceNames = new JComboBox<>(shipNames.get(4));;
+        lcChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> lcChoiceNames = new JComboBox<>(shipNames.get(4));
         lcChoiceNames.addActionListener((event) -> {
-                chooseLightCruiserType(lcChoiceNames.getSelectedIndex());;
+                chooseLightCruiserType(lcChoiceNames.getSelectedIndex());
             });
-        lcChoiceDivide.add(new JLabel("Light Cruiser Ship Classes:"));;
+        lcChoiceDivide.add(new JLabel("Light Cruiser Ship Classes:"));
         lcChoiceDivide.add(lcChoiceNames);
 
         JPanel fChoiceDivide = new JPanel();
-        fChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> fChoiceNames = new JComboBox<>(shipNames.get(5));;
+        fChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> fChoiceNames = new JComboBox<>(shipNames.get(5));
         fChoiceNames.addActionListener((event) -> {
-                chooseFrigateType(fChoiceNames.getSelectedIndex());;
+                chooseFrigateType(fChoiceNames.getSelectedIndex());
             });
-        fChoiceDivide.add(new JLabel("Frigate Ship Classes:"));;
+        fChoiceDivide.add(new JLabel("Frigate Ship Classes:"));
         fChoiceDivide.add(fChoiceNames);
 
         JPanel gChoiceDivide = new JPanel();
-        gChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> gChoiceNames = new JComboBox<>(shipNames.get(6));;
+        gChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> gChoiceNames = new JComboBox<>(shipNames.get(6));
         gChoiceNames.addActionListener((event) -> {
-                chooseGunshipType(gChoiceNames.getSelectedIndex());;
+                chooseGunshipType(gChoiceNames.getSelectedIndex());
             });
-        gChoiceDivide.add(new JLabel("Gunship Ship Classes:"));;
+        gChoiceDivide.add(new JLabel("Gunship Ship Classes:"));
         gChoiceDivide.add(gChoiceNames);
 
         JPanel frChoiceDivide = new JPanel();
-        frChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> frChoiceNames = new JComboBox<>(shipNames.get(11));;
+        frChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> frChoiceNames = new JComboBox<>(shipNames.get(11));
         frChoiceNames.addActionListener((event) -> {
-                chooseFreighterType(frChoiceNames.getSelectedIndex());;
+                chooseFreighterType(frChoiceNames.getSelectedIndex());
             });
-        frChoiceDivide.add(new JLabel("Freighter Ship Classes:"));;
+        frChoiceDivide.add(new JLabel("Freighter Ship Classes:"));
         frChoiceDivide.add(frChoiceNames);
 
         JPanel pChoiceDivide = new JPanel();
-        pChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> pChoiceNames = new JComboBox<>(shipNames.get(12));;
+        pChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> pChoiceNames = new JComboBox<>(shipNames.get(12));
         pChoiceNames.addActionListener((event) -> {
-                choosePatrolType(pChoiceNames.getSelectedIndex());;
+                choosePatrolType(pChoiceNames.getSelectedIndex());
             });
-        pChoiceDivide.add(new JLabel("Patrol Ship Classes:"));;
+        pChoiceDivide.add(new JLabel("Patrol Ship Classes:"));
         pChoiceDivide.add(pChoiceNames);
 
         JPanel tChoiceDivide = new JPanel();
-        tChoiceDivide.setLayout(new GridLayout(1,2));;
-        JComboBox<String> tChoiceNames = new JComboBox<>(shipNames.get(13));;
+        tChoiceDivide.setLayout(new GridLayout(1,2));
+        JComboBox<String> tChoiceNames = new JComboBox<>(shipNames.get(13));
         tChoiceNames.addActionListener((event) -> {
-                chooseTransportType(tChoiceNames.getSelectedIndex());;
+                chooseTransportType(tChoiceNames.getSelectedIndex());
             });
-        tChoiceDivide.add(new JLabel("Transport Ship Classes:"));;
+        tChoiceDivide.add(new JLabel("Transport Ship Classes:"));
         tChoiceDivide.add(tChoiceNames);
 
         dChoice.add(dChoiceDivide, BorderLayout.NORTH);
@@ -582,14 +589,14 @@ public class FleetCreation{
         bChoice = new JPanel();
         sChoice = new JPanel();
 
-        hfChoice.setLayout(new BorderLayout());;
-        lfChoice.setLayout(new BorderLayout());;
-        iChoice.setLayout(new BorderLayout());;
-        bChoice.setLayout(new BorderLayout());;
-        sChoice.setLayout(new BorderLayout());;
+        hfChoice.setLayout(new BorderLayout());
+        lfChoice.setLayout(new BorderLayout());
+        iChoice.setLayout(new BorderLayout());
+        bChoice.setLayout(new BorderLayout());
+        sChoice.setLayout(new BorderLayout());
 
         JPanel hfChoiceDivide = new JPanel();
-        hfChoiceDivide.setLayout(new GridLayout(1,2));;
+        hfChoiceDivide.setLayout(new GridLayout(1,2));
         JComboBox<String> hfChoiceNames = new JComboBox<>(shipNames.get(7));
         hfChoiceNames.addActionListener((event) -> {
                 chooseHeavyFighterType(hfChoiceNames.getSelectedIndex());

@@ -10,3 +10,4 @@ R-41 Starchaser,326,163,20,0
 StarViper-class Attack Platform,180,90,15,0
 Rihkxyrk Assault Fighter,360,180,20,0
 Ixiyen-class Fast Attack Craft,400,200,20,0
+TIE Avenger,196,98,10,0

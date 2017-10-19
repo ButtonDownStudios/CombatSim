@@ -6,3 +6,4 @@ Reborn Sith Bomber,370,185,20,0
 Hyena-class Bomber,250,0,15,0
 Miy'til Assault Bomber,400,200,25,0
 GAT-12 Skipray Blastboat,500,250,25,0
+Alpha-class Xg-1 Star Wing,200,100,15,0

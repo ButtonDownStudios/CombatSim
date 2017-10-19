@@ -11,3 +11,6 @@ Low Altitude Assault Transport,348,174,20,30
 BR-23 Courier,414,207,25,40
 Y-4 Raptor-class Transport,560,280,30,40
 Delta-class T-3c Shuttle,288,144,15,15
+Kappa-class Shuttle,700,350,40,40
+Grek-class Troop Shuttle,600,300,35,50
+Crix-class Assault Shuttle,600,300,35,40

@@ -1,4 +1,3 @@
-import java.util.*;
 import javax.swing.*;
 
 public class HangarUpdater extends JLabel{

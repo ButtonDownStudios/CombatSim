@@ -1,4 +1,3 @@
-import java.util.*;
 import javax.swing.*;
 
 public class ShuttleUpdater extends JLabel{

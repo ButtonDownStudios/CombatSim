@@ -1,7 +1,5 @@
-import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.HashMap;
+
 /**
  * Write a description of class Main here.
  * 
@@ -218,6 +216,15 @@ public class CombatSim{
         shipTypeExample.add(ShipFactory.makeShip(ShipType.FRIGATE,"Pelta-class Frigate"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.GUNSHIP,"Consular-class Cruiser"));
         shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Delta-class T-3c Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Imperial Armored Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Tra'kad-class Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.BOMBER,"Alpha-class Xg-1 Star Wing"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"TIE Avenger"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Amphibious Interstellar Assault Transport"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Kappa-class Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Grek-class Troop Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.SHUTTLE,"Crix-class Assault Shuttle"));
+        shipTypeExample.add(ShipFactory.makeShip(ShipType.TRANSPORT,"Hardcell-class Interstellar Transport"));
 
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Emperor-class Star Dreadnought"));
         ship.get(0).add(ShipFactory.makeShip(ShipType.DREADNOUGHT,"Imperial Dreadnought Cruiser"));
@@ -412,6 +419,15 @@ public class CombatSim{
         ship.get(5).add(ShipFactory.makeShip(ShipType.FRIGATE,"Pelta-class Frigate"));
         ship.get(6).add(ShipFactory.makeShip(ShipType.GUNSHIP,"Consular-class Cruiser"));
         ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Delta-class T-3c Shuttle"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Imperial Armored Transport"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Tra'kad-class Transport"));
+        ship.get(10).add(ShipFactory.makeShip(ShipType.BOMBER,"Alpha-class Xg-1 Star Wing"));
+        ship.get(7).add(ShipFactory.makeShip(ShipType.HEAVYFIGHTER,"TIE Avenger"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Amphibious Interstellar Assault Transport"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Kappa-class Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Grek-class Troop Shuttle"));
+        ship.get(14).add(ShipFactory.makeShip(ShipType.SHUTTLE,"Crix-class Assault Shuttle"));
+        ship.get(13).add(ShipFactory.makeShip(ShipType.TRANSPORT,"Hardcell-class Interstellar Transport"));
 
         long creditLimit = setup.getCreditLimit();
         int roundLimit = setup.getRoundLimit();

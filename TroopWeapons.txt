@@ -1,0 +1,13 @@
+Bowcaster,80,60,5
+EE-3 Carbine Rifle,70,70,4
+DH-44 Blaster Pistol,50,40,2
+DL-17 Blaster Pistol,35,50,2
+WESTAR-34 Blaster Pistol,40,50,1
+LL-30 Blaster Pistol,35,40,1
+DC-17 Hand Blaster,35,45,1
+DC-15a Blaster Rifle,60,60,3
+DT-57 "Annihilator" Blaster,65,50,3
+WESTAR-35 Blaster Pistol,40,50,1
+E-5 Carbine,50,55,2
+DC-15S Blaster Carbine,60,60,2
+E-11 Carbine,60,60,2
