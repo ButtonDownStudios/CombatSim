@@ -154,7 +154,7 @@ public class ShipStats{
         }
         if(s instanceof CapitalShip){
             FleetCreation.setFighters(0, s.getHangar(), i, j);
-            FleetCreation.setFighters(0, s.getHangar(), i, j);
+            FleetCreation.setShuttles(0, s.getShuttles(), i, j);
             FleetCreation.setTroops(0, s.getMaxTroops(), i, j);
         }else if(s.getType() == ShipType.SHUTTLE){
             FleetCreation.setShuttles(1, 0, i, j);

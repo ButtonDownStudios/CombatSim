@@ -2,6 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.util.HashMap;
+import java.util.ArrayList;
 
 public class TroopCreation{
 
@@ -9,10 +10,12 @@ public class TroopCreation{
     private JPanel contentPane;
     private boolean end;
     private HashMap<Troop,Integer> troopCount;
+    private ArrayList<TroopPanel> panels;
 
     public TroopCreation(String army){
         end = false;
         troopCount = new HashMap<Troop,Integer>();
+        panels = new ArrayList<>();
         makeFrame(army);
     }
 
@@ -40,7 +43,11 @@ public class TroopCreation{
         selection.add(troopChoice);
 
         contentPane.add(selection, BorderLayout.NORTH);
-
+        
+        NewTroopPanel knew = new NewTroopPanel();
+        
+        contentPane.add(knew.getContent(), BorderLayout.CENTER);
+        
         JPanel totalInfo = new JPanel();
         totalInfo.setLayout(new GridLayout(2,1));
         JPanel info = new JPanel();

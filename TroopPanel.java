@@ -38,10 +38,10 @@ public abstract class TroopPanel{
         accAssist.setLayout(new GridLayout(1,2));
         accuracy.setLayout(new GridLayout(1,2));
         stat.add(armorType);
-        stat.add(armor);
-        stat.add(accAssist);
         stat.add(weaponType);
+        stat.add(armor);
         stat.add(damage);
+        stat.add(accAssist);
         stat.add(accuracy);
         content.add(stat, BorderLayout.CENTER);
         content.add(south, BorderLayout.SOUTH);
@@ -54,5 +54,9 @@ public abstract class TroopPanel{
         damage.add(new JLabel("Damage:"));
         accAssist.add(new JLabel("Accuracy Assist:"));
         accuracy.add(new JLabel("Accuracy:"));
+    }
+
+    public JPanel getContent(){
+        return content;
     }
 }

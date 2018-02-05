@@ -9,7 +9,7 @@ public class TroopFactory{
     public static String[] weaponStat(String type){
         BufferedReader weapon;
         try{
-            weapon = new BufferedReader(new FileReader("TroopWeapons.txt"));
+            weapon = new BufferedReader(new FileReader("C:\\Users\\Mole\\IdeaProjects\\Combat Sim\\rec\\TroopWeapons.txt"));
             try{
                 String fileRead = weapon.readLine();
                 // loop until all lines are read
@@ -49,7 +49,7 @@ public class TroopFactory{
     public static String[] armorStat(String type){
         BufferedReader armor;
         try{
-            armor = new BufferedReader(new FileReader("TroopArmor.txt"));
+            armor = new BufferedReader(new FileReader("C:\\Users\\Mole\\IdeaProjects\\Combat Sim\\rec\\TroopArmor.txt"));
             try{
                 String fileRead = armor.readLine();
                 // loop until all lines are read

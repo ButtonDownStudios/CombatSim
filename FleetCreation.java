@@ -973,7 +973,7 @@ public class FleetCreation{
         troopUpdate.update(currentTroops);
     }
 
-    public static void setCredits(int old, int knew, int cost){
+    public static void setCredits(int old, int knew, long cost){
         currentCost += (old * cost);
         currentCost -= (knew * cost);
         creditUpdate.update(currentCost);
